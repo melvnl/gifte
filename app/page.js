@@ -75,20 +75,16 @@ export default function Home() {
         if (!isDelaying && touchStartY && touchEndY) {
           const deltaY = touchEndY - touchStartY;
 
-          console.log(deltaY);
-
           if (deltaY) {
             setIsDelaying(true);
             setTimeout(() => {
               if (visible === 25) {
                 setVisible(0);
-              } else if (visible === 1) {
-                setVisible((prevVisible) => prevVisible + 6);
               } else if (visible !== 1) {
                 setVisible((prevVisible) => prevVisible + 1);
               }
               setIsDelaying(false);
-            }, visible === 1 ? 0 : 1000);
+            }, visible === 1 ? 0 : 500);
           }
         }
         touchStartY = null;
@@ -115,12 +111,20 @@ export default function Home() {
     };
   }, [isDelaying, setState, state.hasPassedDoor, visible]);
 
+
+  useEffect(() => {
+    if (state.hasPassedDoor) {
+      setVisible((prevVisible) => prevVisible + 5);
+    }
+  }, [state.hasPassedDoor])
+
+
   return (
-    <div ref={ref}>
+    <div ref={ref} className={classNames(visible === 1 ? " " : " h-screen overflow-hidden")}>
       <AnimatePresence mode='wait'>
         {visible === 0 && <Homepage />}
-        {/* {visible === 1 && <Homepage2 />} */}
-        {visible === 1 && <Screen6 />}
+        {visible === 1 && <Homepage2 />}
+        {visible === 6 && <Screen6 />}
         {visible === 7 && <Screen7 />}
         {visible === 8 && <Screen8 />}
         {visible === 9 && <Screen9 />}

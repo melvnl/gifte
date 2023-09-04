@@ -43,7 +43,7 @@ export default function Home() {
       setColorChange(true);
     }
 
-    if (maskSizeProgress >= 0.85) {
+    if (maskSizeProgress >= 0.8) {
       setState((prev) => ({
         ...prev,
         hasPassedDoor: true
