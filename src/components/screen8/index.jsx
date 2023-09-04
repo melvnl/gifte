@@ -27,7 +27,7 @@ export default function Screen8() {
   });
 
   return (
-    <React.Fragment>
+    <div className='px-5 py-3'>
       <Header />
       <div className=" text-gray mt-6">
         <Image src="/images/screen-8-img-1.png" width={320} height={200} alt='' className=' mb-3' />
@@ -41,6 +41,6 @@ export default function Screen8() {
         </div>
         <h1 className=' -mt-72'>Glow</h1>
       </div>
-    </React.Fragment>
+    </div>
   )
 }

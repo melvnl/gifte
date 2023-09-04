@@ -24,7 +24,7 @@ export default function Screen6() {
   });
 
   return (
-    <React.Fragment>
+    <div className=' px-5 py-3'>
       <Header />
       <div ref={ref} className=" mt-[76px] flex flex-row justify-between gap-4">
         <div className=" w-full  text-gray text-justify">
@@ -38,6 +38,6 @@ export default function Screen6() {
           />
         </div>
       </div>
-    </React.Fragment>
+    </div>
   )
 }

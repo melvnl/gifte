@@ -25,7 +25,7 @@ export default function Screen19() {
   });
 
   return (
-    <React.Fragment>
+    <div className=' px-5 py-3'>
       <Header />
       <div ref={ref} className="text-[#6D6D6D] text-center">
         <div className=" mt-[238px]">
@@ -46,6 +46,6 @@ export default function Screen19() {
           }
         </div>
       </div>
-    </React.Fragment >
+    </div >
   )
 }

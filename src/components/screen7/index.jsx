@@ -27,7 +27,7 @@ export default function Screen7() {
   });
 
   return (
-    <React.Fragment>
+    <div className=' px-5 py-3'>
       <Header />
       <div ref={ref} className=" mt-[76px] flex flex-col justify-between gap-4">
         <div className="flex justify-between">
@@ -45,6 +45,6 @@ export default function Screen7() {
         </div>
         <Image src="/images/flower.png" width={425} height={502} alt='' />
       </div>
-    </React.Fragment>
+    </div>
   )
 }

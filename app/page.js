@@ -21,6 +21,7 @@ import Screen22 from '@/src/components/screen22';
 import Screen23 from '@/src/components/screen23';
 import Screen24 from '@/src/components/screen24';
 import Screen25 from '@/src/components/screen25';
+import { useGlobalState } from '@/context/GlobalStateProvider';
 
 const specialScreen = {
   21: {
@@ -48,53 +49,55 @@ const specialScreen = {
 
 export default function Home() {
 
-  const [visible, setVisible] = useState(6);
+  const [visible, setVisible] = useState(0);
   const [isDelaying, setIsDelaying] = useState(false);
 
+  const { state, setState } = useGlobalState();
+
   const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger the callback once when the component comes into view
+    triggerOnce: true,
   });
 
-  // Add an event listener for the wheel event
   useEffect(() => {
-    const handleWheel = () => {
-      // Check if we are currently delaying the change
-      if (!isDelaying) {
+    const handleWheel = (event) => {
+      if (!isDelaying && event.deltaY > 0) { // Check if scrolling down
         setIsDelaying(true);
         setTimeout(() => {
-          // After 2 seconds, increment the visible value by 1
-          if (visible === 0) {
-            setVisible((prevVisible) => prevVisible + 6);
-          }
-          else if (visible === 20) {
+          if (visible === 25) {
             setVisible(0);
-          }
-          else {
+          } else if (visible === 1 && state.hasPassedDoor) {
+            console.log("hit");
+            setVisible((prevVisible) => prevVisible + 5);
+          } else if (visible !== 1) {
             setVisible((prevVisible) => prevVisible + 1);
           }
-          setIsDelaying(false); // Reset the delay flag
-        }, 1000); // 2 seconds delay
+          setIsDelaying(false);
+        }, 1000);
       }
     };
 
-    // Attach the event listener when the component mounts
+    if (visible > 1) {
+      setState((prev) => ({
+        ...prev,
+        hasPassedDoor: false
+      }));
+    }
+
     window.addEventListener('wheel', handleWheel);
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, [isDelaying, visible]);
+  }, [isDelaying, setState, state.hasPassedDoor, visible]);
 
-  // console.log(visible);
 
+  console.log(' visible', visible);
   return (
     <div ref={ref}>
       <AnimatePresence mode='wait'>
-        {/* {visible === 0 && <Homepage />} */}
-        {/* {visible === 1 && <Homepage2 />} */}
-        <Homepage2 />
-        {/* {visible === 6 && <Screen6 />}
+        {visible === 0 && <Homepage />}
+        {visible === 1 && <Homepage2 />}
+        {visible === 6 && <Screen6 />}
         {visible === 7 && <Screen7 />}
         {visible === 8 && <Screen8 />}
         {visible === 9 && <Screen9 />}
@@ -109,14 +112,14 @@ export default function Home() {
         {visible === 22 && <Screen22 />}
         {visible === 23 && <Screen23 />}
         {visible === 24 && <Screen24 />}
-        {visible === 25 && <Screen25 />} */}
+        {visible === 25 && <Screen25 />}
       </AnimatePresence>
-      {/* {visible > 0 && <ProgressBar
+      {visible > 1 && <ProgressBar
         special={visible >= 21 && visible <= 25}
         title={visible >= 21 && visible <= 25 ? specialScreen[visible].title : ""}
         subtitle={visible >= 21 && visible <= 25 ? specialScreen[visible].subtitle : ""}
         progress={visible / 26}
-      />} */}
+      />}
     </div>
   )
 }

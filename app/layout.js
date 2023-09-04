@@ -1,3 +1,4 @@
+import { GlobalStateProvider } from '@/context/GlobalStateProvider'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,11 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className=" w-full max-w-[425px] h-screen mx-auto ">
-          {children}
-        </div>
-      </body>
+      <GlobalStateProvider>
+        <body className={inter.className}>
+          <div className=" w-full max-w-[425px] h-screen mx-auto ">
+            {children}
+          </div>
+        </body>
+      </GlobalStateProvider>
     </html>
   )
 }

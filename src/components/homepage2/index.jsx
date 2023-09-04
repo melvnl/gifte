@@ -3,10 +3,12 @@ import { useRef, useEffect, useCallback, useState } from 'react';
 import styles from './homepage2.module.css'
 import Image from 'next/image';
 import classNames from 'classnames';
+import { useGlobalState } from '@/context/GlobalStateProvider';
 
 export default function Home() {
 
   const [colorChange, setColorChange] = useState(false);
+  const { setState } = useGlobalState();
 
   const container = useRef(null);
   const stickyMask = useRef(null);
@@ -18,29 +20,39 @@ export default function Home() {
 
   const getScrollProgress = useCallback(
     () => {
-      const scrollProgress = stickyMask.current.offsetTop / (container.current.getBoundingClientRect().height - window.innerHeight)
-      const delta = scrollProgress - easedScrollProgress;
-      easedScrollProgress += delta * easing;
-      return easedScrollProgress
+      if (container.current && stickyMask.current) { // Check if elements are available
+        const scrollProgress = stickyMask.current.offsetTop / (container.current.getBoundingClientRect().height - window.innerHeight)
+        const delta = scrollProgress - easedScrollProgress;
+        easedScrollProgress += delta * easing;
+        return easedScrollProgress;
+      }
+      return 0;
     },
     [],
   )
 
   const animate = useCallback(() => {
     const maskSizeProgress = targetMaskSize * getScrollProgress();
-    stickyMask.current.style.webkitMaskSize = (initialMaskSize + maskSizeProgress) * 100 + "%";
 
+    if (stickyMask.current) {
+      stickyMask.current.style.webkitMaskSize = (initialMaskSize + maskSizeProgress) * 100 + "%";
+    }
+
+    console.log("maskSizeProgress", maskSizeProgress)
     setColorChange(false);
     if (maskSizeProgress >= 0.45) {
       setColorChange(true);
     }
 
-    if (maskSizeProgress >= 0.99) {
-      //check state here
+    if (maskSizeProgress >= 0.7) {
+      setState((prev) => ({
+        ...prev,
+        hasPassedDoor: true
+      }));
       console.log("Mask fully covers the screen");
     }
     requestAnimationFrame(animate)
-  }, [getScrollProgress])
+  }, [getScrollProgress, setState])
 
   useEffect(() => {
     requestAnimationFrame(animate)
