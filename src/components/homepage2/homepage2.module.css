@@ -1,0 +1,32 @@
+.main {
+  margin-bottom: 100vh;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  position: relative;
+  height: 300vh;
+  background-color: #000000;
+}
+
+.stickyMask {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  mask-image: url('/images/door.svg');
+  mask-position: center bottom;
+  mask-repeat: no-repeat;
+  mask-size: 20%;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stickyMask .video {
+  width: 100%;
+  max-width: 425px;
+  object-fit: cover;
+}

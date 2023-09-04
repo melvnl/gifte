@@ -1,113 +1,122 @@
-import Image from 'next/image'
+'use client'
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import Homepage from '@/src/components/homepage';
+import Homepage2 from '@/src/components/homepage2';
+import Screen6 from '@/src/components/screen6';
+import Screen7 from '@/src/components/screen7';
+import Screen8 from '@/src/components/screen8';
+import Screen9 from '@/src/components/screen9';
+import Screen10 from '@/src/components/screen10';
+import Screen11 from '@/src/components/screen11';
+import Screen13 from '@/src/components/screen13';
+import Screen15 from '@/src/components/screen15';
+import Screen17 from '@/src/components/screen17';
+import Screen19 from '@/src/components/screen19';
+import Screen20 from '@/src/components/screen20';
+import ProgressBar from '@/src/components/progressbar';
+import Screen21 from '@/src/components/screen21';
+import Screen22 from '@/src/components/screen22';
+import Screen23 from '@/src/components/screen23';
+import Screen24 from '@/src/components/screen24';
+import Screen25 from '@/src/components/screen25';
+
+const specialScreen = {
+  21: {
+    title: "Step 1",
+    subtitle: "Sign up / log in to your account through our website at www.gifteflorist.com"
+  },
+  22: {
+    title: "Step 2",
+    subtitle: "Click the menu on the top left, click your name & go to your account page."
+  },
+  23: {
+    title: "Step 3",
+    subtitle: "Create a reminder to the lucky one who is going to receive this special collection."
+  },
+  24: {
+    title: "Step 4",
+    subtitle: "Screenshot and save the reminder creation success proof to show it to the booth PIC."
+  },
+  25: {
+    title: "Step 5",
+    subtitle: "Share your moment & experience on instagram story then tag @gifte.id & @__circlescreative and show it to the booth PIC to get your gift!"
+  },
+
+}
 
 export default function Home() {
+
+  const [visible, setVisible] = useState(6);
+  const [isDelaying, setIsDelaying] = useState(false);
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the callback once when the component comes into view
+  });
+
+  // Add an event listener for the wheel event
+  useEffect(() => {
+    const handleWheel = () => {
+      // Check if we are currently delaying the change
+      if (!isDelaying) {
+        setIsDelaying(true);
+        setTimeout(() => {
+          // After 2 seconds, increment the visible value by 1
+          if (visible === 0) {
+            setVisible((prevVisible) => prevVisible + 6);
+          }
+          else if (visible === 20) {
+            setVisible(0);
+          }
+          else {
+            setVisible((prevVisible) => prevVisible + 1);
+          }
+          setIsDelaying(false); // Reset the delay flag
+        }, 1000); // 2 seconds delay
+      }
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener('wheel', handleWheel);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, [isDelaying, visible]);
+
+  // console.log(visible);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div ref={ref}>
+      <AnimatePresence mode='wait'>
+        {/* {visible === 0 && <Homepage />} */}
+        {/* {visible === 1 && <Homepage2 />} */}
+        <Homepage2 />
+        {/* {visible === 6 && <Screen6 />}
+        {visible === 7 && <Screen7 />}
+        {visible === 8 && <Screen8 />}
+        {visible === 9 && <Screen9 />}
+        {visible === 10 && <Screen10 />}
+        {visible === 11 && <Screen11 />}
+        {visible === 13 && <Screen13 />}
+        {visible === 15 && <Screen15 />}
+        {visible === 17 && <Screen17 />}
+        {visible === 19 && <Screen19 />}
+        {visible === 20 && <Screen20 />}
+        {visible === 21 && <Screen21 />}
+        {visible === 22 && <Screen22 />}
+        {visible === 23 && <Screen23 />}
+        {visible === 24 && <Screen24 />}
+        {visible === 25 && <Screen25 />} */}
+      </AnimatePresence>
+      {/* {visible > 0 && <ProgressBar
+        special={visible >= 21 && visible <= 25}
+        title={visible >= 21 && visible <= 25 ? specialScreen[visible].title : ""}
+        subtitle={visible >= 21 && visible <= 25 ? specialScreen[visible].subtitle : ""}
+        progress={visible / 26}
+      />} */}
+    </div>
   )
 }
