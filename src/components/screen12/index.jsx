@@ -27,7 +27,7 @@ export default function Screen12() {
   });
 
   return (
-    <div className=' py-3'>
+    <div className='py-3'>
       <div className=" px-5">
         <Header />
       </div>

@@ -25,6 +25,7 @@ import { useGlobalState } from '@/context/GlobalStateProvider';
 import Screen18 from '@/src/components/screen18';
 import Screen16 from '@/src/components/screen16';
 import Screen12 from '@/src/components/screen12';
+import classNames from 'classnames';
 
 const specialScreen = {
   21: {
@@ -81,8 +82,8 @@ export default function Home() {
             setTimeout(() => {
               if (visible === 25) {
                 setVisible(0);
-              } else if (visible === 1 && state.hasPassedDoor) {
-                setVisible((prevVisible) => prevVisible + 5);
+              } else if (visible === 1) {
+                setVisible((prevVisible) => prevVisible + 6);
               } else if (visible !== 1) {
                 setVisible((prevVisible) => prevVisible + 1);
               }
@@ -114,21 +115,18 @@ export default function Home() {
     };
   }, [isDelaying, setState, state.hasPassedDoor, visible]);
 
-
-
-  console.log(' visible', state.hasPassedDoor);
   return (
     <div ref={ref}>
       <AnimatePresence mode='wait'>
         {visible === 0 && <Homepage />}
-        {visible === 1 && <Homepage2 />}
-        {visible === 6 && <Screen6 />}
+        {/* {visible === 1 && <Homepage2 />} */}
+        {visible === 1 && <Screen6 />}
         {visible === 7 && <Screen7 />}
         {visible === 8 && <Screen8 />}
         {visible === 9 && <Screen9 />}
         {visible === 10 && <Screen10 />}
         {visible === 11 && <Screen11 />}
-        {visible === 12 && <Screen12 />}
+        {/* {visible === 12 && <Screen12 />} */}
         {visible === 13 && <Screen13 />}
         {visible === 15 && <Screen15 />}
         {visible === 16 && <Screen16 />}
