@@ -62,33 +62,55 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const handleWheel = (event) => {
-      if (!isDelaying && event.deltaY > 0) { // Check if scrolling down
-        setIsDelaying(true);
-        setTimeout(() => {
-          if (visible === 25) {
-            setVisible(0);
-          } else if (visible === 1 && state.hasPassedDoor) {
-            setVisible((prevVisible) => prevVisible + 5);
-          } else if (visible !== 1) {
-            setVisible((prevVisible) => prevVisible + 1);
+    const handleSwipe = (event) => {
+      let touchStartY = event.touches[0].clientY;
+      let touchEndY;
+
+      const handleTouchMove = (e) => {
+        touchEndY = e.touches[0].clientY;
+      };
+
+      const handleTouchEnd = () => {
+        if (!isDelaying && touchStartY && touchEndY) {
+          const deltaY = touchEndY - touchStartY;
+
+          console.log(deltaY);
+
+          if (deltaY) {
+            setIsDelaying(true);
+            setTimeout(() => {
+              if (visible === 25) {
+                setVisible(0);
+              } else if (visible === 1 && state.hasPassedDoor) {
+                setVisible((prevVisible) => prevVisible + 5);
+              } else if (visible !== 1) {
+                setVisible((prevVisible) => prevVisible + 1);
+              }
+              setIsDelaying(false);
+            }, visible === 1 ? 0 : 1000);
           }
-          setIsDelaying(false);
-        }, visible === 1 ? 0 : 1000); // Set timeout to 0 if visible is 1, otherwise 1000ms
-      }
+        }
+        touchStartY = null;
+        touchEndY = null;
+        window.removeEventListener('touchmove', handleTouchMove);
+        window.removeEventListener('touchend', handleTouchEnd);
+      };
+
+      window.addEventListener('touchmove', handleTouchMove);
+      window.addEventListener('touchend', handleTouchEnd);
     };
 
     if (visible > 1) {
       setState((prev) => ({
         ...prev,
-        hasPassedDoor: false
+        hasPassedDoor: false,
       }));
     }
 
-    window.addEventListener('wheel', handleWheel);
+    window.addEventListener('touchstart', handleSwipe);
 
     return () => {
-      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleSwipe);
     };
   }, [isDelaying, setState, state.hasPassedDoor, visible]);
 
