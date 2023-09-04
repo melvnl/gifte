@@ -23,6 +23,7 @@ import Screen24 from '@/src/components/screen24';
 import Screen25 from '@/src/components/screen25';
 import { useGlobalState } from '@/context/GlobalStateProvider';
 import Screen18 from '@/src/components/screen18';
+import Screen16 from '@/src/components/screen16';
 
 const specialScreen = {
   21: {
@@ -106,6 +107,7 @@ export default function Home() {
         {visible === 11 && <Screen11 />}
         {visible === 13 && <Screen13 />}
         {visible === 15 && <Screen15 />}
+        {visible === 16 && <Screen16 />}
         {visible === 17 && <Screen17 />}
         {visible === 18 && <Screen18 />}
         {visible === 19 && <Screen19 />}
