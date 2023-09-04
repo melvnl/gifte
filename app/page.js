@@ -120,7 +120,7 @@ export default function Home() {
 
 
   return (
-    <div ref={ref} className={classNames(visible === 1 ? " " : " h-screen overflow-hidden")}>
+    <div ref={ref} className={classNames(visible === 1 ? " " : " h-screen overflow-hidden", " no-scrollbar")}>
       <AnimatePresence mode='wait'>
         {visible === 0 && <Homepage />}
         {visible === 1 && <Homepage2 />}
