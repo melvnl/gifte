@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GlobalStateProvider>
         <body className={inter.className}>
-          <div id='body' className=" w-full max-w-[425px] h-screen mx-auto ">
+          <div id='body' className=" w-full max-w-[425px] h-screen overflow-hidden mx-auto ">
             {children}
           </div>
         </body>
