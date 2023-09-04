@@ -51,7 +51,7 @@ export default function Homepage() {
       </div>
       <div className=" absolute bottom-0 items-center left-1/2 text-gray">
         <p className=' -ml-12 mb-6'>Scroll to enter</p>
-        <Image src="/icons/arrow.svg" alt='' width={14} height={0} className='animate-bounce -mb-4 ' />
+        <Image src="/icons/arrow.svg" alt='' width={14} height={0} className='animate-bounce ' />
       </div>
     </div >
   )

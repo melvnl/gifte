@@ -8,7 +8,7 @@ import { useGlobalState } from '@/context/GlobalStateProvider';
 export default function Home() {
 
   const [colorChange, setColorChange] = useState(false);
-  const { setState } = useGlobalState();
+  const { state, setState } = useGlobalState();
 
   const container = useRef(null);
   const stickyMask = useRef(null);
@@ -38,18 +38,16 @@ export default function Home() {
       stickyMask.current.style.webkitMaskSize = (initialMaskSize + maskSizeProgress) * 100 + "%";
     }
 
-    console.log("maskSizeProgress", maskSizeProgress)
     setColorChange(false);
     if (maskSizeProgress >= 0.45) {
       setColorChange(true);
     }
 
-    if (maskSizeProgress >= 0.7) {
+    if (maskSizeProgress >= 0.85) {
       setState((prev) => ({
         ...prev,
         hasPassedDoor: true
       }));
-      console.log("Mask fully covers the screen");
     }
     requestAnimationFrame(animate)
   }, [getScrollProgress, setState])
@@ -59,8 +57,8 @@ export default function Home() {
   }, [animate])
 
   return (
-    <main className={styles.main}>
-      <div ref={container} className={styles.container}>
+    <main className={classNames(state.hasPassedDoor && styles.main2, styles.main)}>
+      <div ref={container} className={classNames(state.hasPassedDoor && styles.container2, styles.container)}>
         <div className={classNames(colorChange ? "text-black" : "text-white", "w-fit sticky z-50 mx-auto left-1/3 top-[250px] transition-transform delay-300 ")}>Keep scrolling to enter</div>
         <div ref={stickyMask} className={styles.stickyMask}>
           <Image src="/images/flower.png" width={425} height={755} alt='' className=' w-full max-w-[425px] object-cover' />

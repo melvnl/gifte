@@ -7,7 +7,7 @@ html {
   height: 100vh;
 }
 
-body {
+#body {
   overflow-y: scroll;
   scrollbar-width: none;
   /* Firefox */
@@ -16,7 +16,7 @@ body {
 }
 
 /* Hide the scrollbar for Webkit browsers (e.g., Chrome, Safari) */
-body::-webkit-scrollbar {
+#body::-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;

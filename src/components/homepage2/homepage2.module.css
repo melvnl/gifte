@@ -5,9 +5,24 @@
   margin-right: auto;
 }
 
+.main2 {
+  margin-bottom: 100vh;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:hidden
+}
+
+
 .container {
   position: relative;
   height: 300vh;
+  background-color: #000000;
+}
+
+.container2 {
+  position: relative;
+  height: 100vh;
   background-color: #000000;
 }
 

@@ -68,13 +68,12 @@ export default function Home() {
           if (visible === 25) {
             setVisible(0);
           } else if (visible === 1 && state.hasPassedDoor) {
-            console.log("hit");
             setVisible((prevVisible) => prevVisible + 5);
           } else if (visible !== 1) {
             setVisible((prevVisible) => prevVisible + 1);
           }
           setIsDelaying(false);
-        }, 1000);
+        }, visible === 1 ? 0 : 1000); // Set timeout to 0 if visible is 1, otherwise 1000ms
       }
     };
 
@@ -93,7 +92,8 @@ export default function Home() {
   }, [isDelaying, setState, state.hasPassedDoor, visible]);
 
 
-  console.log(' visible', visible);
+
+  console.log(' visible', state.hasPassedDoor);
   return (
     <div ref={ref}>
       <AnimatePresence mode='wait'>
