@@ -71,9 +71,10 @@ export default function Home() {
       {
         !textVisible && (
           <div className="">
-            <div className=" text-white w-fit sticky z-100 mx-auto left-1/5 bottom-[20px] transition-transform delay-300 ">Scroll up to explore the exhibition</div>
+            <div className=" text-white w-fit sticky z-100 mx-auto left-1/5 bottom-[120px] transition-transform delay-300 ">Scroll up to explore the exhibition</div>
             <ProgressBar
               special={false}
+              isDoor={true}
               title=""
               subtitle=""
               progress={2 / 26}

@@ -16,7 +16,7 @@
 
 .container {
   position: relative;
-  height: 300vh;
+  height: 200vh;
   background-color: #000000;
 }
 
@@ -29,13 +29,13 @@
 .stickyMask {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: calc(100vh + 120px);
   justify-content: center;
   mask-image: url('/images/door.svg');
   mask-position: center bottom;
   mask-repeat: no-repeat;
   mask-size: 20%;
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
