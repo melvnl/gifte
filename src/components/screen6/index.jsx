@@ -33,8 +33,8 @@ export default function Screen6() {
             loop={1}
             cursor
             cursorStyle='|'
-            typeSpeed={150}
-            deleteSpeed={500000}
+            typeSpeed={350}
+            deleteSpeed={1000000}
           />
         </div>
       </div>
