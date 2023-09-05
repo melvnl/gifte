@@ -52,7 +52,7 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            "flex flex-col absolute border-t border-[#E7E7E7] top-12 bg-white px-5 py-3",
+            "flex flex-col font-RecklessNueu absolute border-t border-[#E7E7E7] top-12 bg-white px-5 py-3",
             isMenuRendered && styles.menuRendered
           )}
         >

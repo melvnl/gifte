@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
+import classNames from 'classnames';
 
 const phrares = [
-  "Earn discount up to IDR 999.9999 ",
-  "Thanks for visiting our exhibition, as a token of ",
-  "our gratitude, earn a limited discount this ",
-  "collection’s purchase by following the steps.",
+  "A gift from us! Discount up to IDR 999.999",
+  "As a token of our gratitude, earn limited discount  ",
+  "when purchasing this collection with this ",
+  "following",
 ]
 
 export default function Screen20() {
@@ -25,18 +26,18 @@ export default function Screen20() {
   });
 
   return (
-    <div className=' px-5 py-3'>
+    <div>
       <Header />
-      <div ref={ref} className="text-[#6D6D6D] text-center flex flex-col justify-center items-center mt-[238px]">
+      <div ref={ref} className="text-[#6D6D6D] text-center flex flex-col px-5 py-3 justify-center items-center mt-[238px]">
         {
           phrares.map((phrase, index) => {
-            return <div key={index} className="overflow-hidden">
-              {index === 1 ? (
-                <motion.h1 custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-base'>
+            return <div key={index} className={classNames(index === 0 ? "font-RecklessNueu" : "font-Inter ", "overflow-hidden mb-1 text-center")}>
+              {index === 0 ? (
+                <motion.h1 custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' font-medium text-gray text-base'>
                   {phrase}
                 </motion.h1>
               ) : (
-                <motion.p custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-gray text-sm'>
+                <motion.p custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-[#6D6D6D] text-sm'>
                   {phrase}
                 </motion.p>
               )}

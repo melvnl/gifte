@@ -27,24 +27,22 @@ export default function Screen7() {
   });
 
   return (
-    <div className=' px-5 py-3'>
+    <div className=''>
       <Header />
-      <div ref={ref} className=" mt-[76px] flex flex-col justify-between gap-4">
-        <div className="flex justify-between">
+      <div ref={ref} className=" mt-[76px] flex flex-col justify-between px-5">
+        <div className="flex justify-between font-RecklessNueu font-semibold text-gray">
           <h1 className=' text-base'>Transparent Tulip Showcase</h1>
           <span className=' text-base'>1/6</span>
         </div>
-        <div className=" text-[#6D6D6D] text-justify">
+        <div className=" font-Inter text-[#6D6D6D] text-justify ">
           {phrares.map((phrase, index) => {
-            return <div key={index} className="overflow-hidden">
-              {<motion.p custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
-                {phrase}
-              </motion.p>}
-            </div>;
+            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-xs'>
+              {phrase}
+            </motion.span>
           })}
         </div>
         <Image src="/images/flower.png" width={425} height={502} alt='' />
       </div>
-    </div>
+    </div >
   )
 }

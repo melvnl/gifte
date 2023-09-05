@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
+import { useGlobalState } from '@/context/GlobalStateProvider';
+import ProgressBar from '@/src/components/progressbar';
 import Homepage from '@/src/components/homepage';
 import Homepage2 from '@/src/components/homepage2';
 import Screen6 from '@/src/components/screen6';
@@ -10,22 +13,17 @@ import Screen8 from '@/src/components/screen8';
 import Screen9 from '@/src/components/screen9';
 import Screen10 from '@/src/components/screen10';
 import Screen11 from '@/src/components/screen11';
+import Screen12 from '@/src/components/screen12';
 import Screen13 from '@/src/components/screen13';
 import Screen15 from '@/src/components/screen15';
-import Screen17 from '@/src/components/screen17';
+import Screen16 from '@/src/components/screen16';
 import Screen19 from '@/src/components/screen19';
 import Screen20 from '@/src/components/screen20';
-import ProgressBar from '@/src/components/progressbar';
 import Screen21 from '@/src/components/screen21';
 import Screen22 from '@/src/components/screen22';
 import Screen23 from '@/src/components/screen23';
 import Screen24 from '@/src/components/screen24';
 import Screen25 from '@/src/components/screen25';
-import { useGlobalState } from '@/context/GlobalStateProvider';
-import Screen18 from '@/src/components/screen18';
-import Screen16 from '@/src/components/screen16';
-import Screen12 from '@/src/components/screen12';
-import classNames from 'classnames';
 
 const specialScreen = {
   21: {
@@ -130,12 +128,12 @@ export default function Home() {
         {visible === 9 && <Screen9 />}
         {visible === 10 && <Screen10 />}
         {visible === 11 && <Screen11 />}
-        {/* {visible === 12 && <Screen12 />} */}
+        {visible === 12 && <Screen12 />}
         {visible === 13 && <Screen13 />}
         {visible === 15 && <Screen15 />}
         {visible === 16 && <Screen16 />}
-        {visible === 17 && <Screen17 />}
-        {visible === 18 && <Screen18 />}
+        {/* {visible === 17 && <Screen17 />} */}
+        {/* {visible === 18 && <Screen18 />} */}
         {visible === 19 && <Screen19 />}
         {visible === 20 && <Screen20 />}
         {visible === 21 && <Screen21 />}

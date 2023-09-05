@@ -15,7 +15,15 @@ module.exports = {
       colors: {
         gray: '#3D3D3D'
       },
+      fontFamily: {
+        Inter: ["var(--font-inter)"],
+        RecklessNueu: ["var(--font-nue)"],
+      },
     },
   },
+  safelist: [
+    "font-Inter",
+    "font-RecklessNueu",
+  ],
   plugins: [],
 }

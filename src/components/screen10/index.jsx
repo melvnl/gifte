@@ -29,13 +29,13 @@ export default function Screen10() {
   });
 
   return (
-    <div className='px-5 py-3 text-[#6D6D6D] '>
+    <div className=' text-[#6D6D6D] '>
       <Header />
-      <div className="  mt-6  text-center ">
+      <div className=" text-center ">
         <Image src="/images/screen-10-flower-1.png" width={425} height={175} alt='' />
-        <h1 className=' my-1'>Glow</h1>
+        <h1 className=' font-RecklessNueu my-2'>Glow</h1>
         <Image src="/images/screen-10-flower-2.png" width={425} height={175} alt='' />
-        <h1 className=' my-1'>Light</h1>
+        <h1 className=' font-RecklessNueu my-2'>Within You</h1>
         <Image src="/images/screen-10-flower-3.png" width={425} height={175} alt='' />
       </div>
     </div>

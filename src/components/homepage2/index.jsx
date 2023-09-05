@@ -59,8 +59,8 @@ export default function Home() {
   return (
     <main className={classNames(state.hasPassedDoor && styles.main2, styles.main)}>
       <div ref={container} className={classNames(state.hasPassedDoor && styles.container2, styles.container)}>
-        {textVisible && (<div className=" w-fit sticky z-50 mx-auto left-1/3 top-[250px] transition-transform delay-300 flex flex-col items-center justify-center ">
-          <div className="text-white">Keep scrolling to enter</div>
+        {textVisible && (<div className=" font-RecklessNueu w-fit sticky z-50 mx-auto left-1/4 top-[250px] transition-transform delay-300 flex flex-col items-center justify-center ">
+          <div className="text-white text-lg">Keep scrolling to enter</div>
           <Image src="/icons/white-arrow.svg" alt='' width={12} height={0} className='animate-bounce text-white mt-4 ' />
         </div>)}
 

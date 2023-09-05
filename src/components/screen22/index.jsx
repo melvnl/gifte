@@ -19,9 +19,9 @@ export default function Screen22() {
   });
 
   return (
-    <div className='px-5 py-3'>
+    <div>
       <Header />
-      <div className=" mt-6 flex justify-center">
+      <div className=" mt-6 flex justify-center px-5 py-3">
         <Image src="/images/sign-up-flow-2.svg" width={292} height={520} alt='' quality={100} />
       </div>
     </div >

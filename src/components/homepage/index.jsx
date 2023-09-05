@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
 
 const phrases = [
   "Enter the",
-  "[Collection Name]",
+  "Garden of Glow",
   "digital exhibition",
 ]
 
@@ -34,7 +35,7 @@ export default function Homepage() {
       <div ref={ref} className=" my-8 text-gray text-center">
         {
           phrases.map((phrase, index) => {
-            return <div key={index} className="overflow-hidden">
+            return <div key={index} className={classNames(index === 1 ? "font-RecklessNueu" : "font-Inter ", "overflow-hidden mb-1")}>
               {index === 1 ? (
                 <motion.h1 custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-2xl'>
                   {phrase}
@@ -52,7 +53,7 @@ export default function Homepage() {
         <Image src="/images/home-img-3.png" alt='' width={180} height={253} />
         <Image src="/images/home-img-4.png" alt='' width={180} height={253} />
       </div>
-      <div className=" absolute bottom-0 items-center left-1/2 text-gray">
+      <div className=" font-Inter absolute bottom-0 items-center left-1/2 text-gray">
         <p className=' -ml-12 mb-6'>Scroll to enter</p>
         <Image src="/icons/arrow.svg" alt='' width={14} height={0} className='animate-bounce ' />
       </div>

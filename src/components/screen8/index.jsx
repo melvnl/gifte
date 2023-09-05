@@ -27,19 +27,19 @@ export default function Screen8() {
   });
 
   return (
-    <div className='px-5 py-3'>
+    <div className=''>
       <Header />
-      <div className=" text-gray mt-6">
+      <div className=" text-gray mt-6 px-5">
         <Image src="/images/screen-8-img-1.png" width={320} height={200} alt='' className=' mb-3' />
         <div className=" -ml-5 flex">
           <Image src="/images/screen-8-img-2.png" width={174} height={200} alt='' />
-          <h1 className=' ml-3 mr-auto'>Feel</h1>
+          <h1 className=' font-RecklessNueu ml-3 mr-auto'>Feel</h1>
         </div>
         <div className=" flex flex-col ">
-          <h1 className=' ml-auto'>The</h1>
+          <h1 className=' font-RecklessNueu ml-auto'>The</h1>
           <Image src="/images/screen-8-img-3.png" width={174} height={285} alt='' className=' ml-auto -mr-5' />
         </div>
-        <h1 className=' -mt-72'>Glow</h1>
+        <h1 className=' font-RecklessNueu -mt-72'>Glow</h1>
       </div>
     </div>
   )
