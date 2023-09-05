@@ -73,13 +73,22 @@ export default function Home() {
         if (!isDelaying && touchStartY && touchEndY) {
           const deltaY = touchEndY - touchStartY;
 
-          if (deltaY) {
+          if (deltaY < 0) {
             setIsDelaying(true);
             setTimeout(() => {
               if (visible === 25) {
                 setVisible(0);
               } else if (visible !== 1) {
                 setVisible((prevVisible) => prevVisible + 1);
+              }
+              setIsDelaying(false);
+            }, visible === 1 ? 0 : 500);
+          }
+          else {
+            setIsDelaying(true);
+            setTimeout(() => {
+              if (visible > 0) {
+                setVisible((prevVisible) => prevVisible - 1);
               }
               setIsDelaying(false);
             }, visible === 1 ? 0 : 500);
