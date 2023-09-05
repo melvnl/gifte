@@ -24,6 +24,9 @@ export default function Homepage() {
 
   return (
     <div className=" bg-white flex flex-col h-screen justify-between relative ">
+      <div className=" absolute -ml-[30px] left-1/2 top-[10px] w-[60px] h-[32px]">
+        <Image src="/icons/gifte.png" alt='' width={60} height={32} />
+      </div>
       <div className=" flex justify-between">
         <Image src="/images/home-img-1.png" alt='' width={180} height={253} />
         <Image src="/images/home-img-2.png" alt='' width={180} height={253} />
