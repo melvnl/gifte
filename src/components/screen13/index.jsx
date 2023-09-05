@@ -7,11 +7,12 @@ import React from 'react';
 import Image from 'next/image';
 
 const phrares = [
-  "The subtle fusion of fabric and blossoms creates a living ",
-  "canvas, where each petal is a stroke of color and grace. ",
-  "With a harmonious balance of vibrancy and refinement, ",
-  "it embodies the beauty of nature's grace weaves a ",
-  "symphony of textures and elements."
+  "Crafted with love, it cradles a single rose, ",
+  "signifying dedication. The pink represents ",
+  "unwavering love, and the floral details form a ",
+  "cupid's heart and arrow, symbolizing the ",
+  "enchantment of Gifte. It's a cherished token of ",
+  "affection and a heartfelt connection."
 ]
 
 export default function Screen13() {
@@ -30,13 +31,13 @@ export default function Screen13() {
     <div className=' '>
       <Header />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
-        <div className="flex justify-between font-RecklessNueu text-gray font-semibold">
-          <h1 className=' text-base'>Fabric Bouquet</h1>
-          <span className=' text-base'>4/6</span>
+        <div className="flex justify-between font-RecklessNueu text-gray font-semibold mb-1">
+          <h1 className=' text-base'>Cupid Heart</h1>
+          <span className=' text-base'>4/5</span>
         </div>
-        <div className=" text-[#6D6D6D] text-justify">
+        <div className=" text-[#6D6D6D] text-justify leading-5">
           {phrares.map((phrase, index) => {
-            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-xs'>
+            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
               {phrase}
             </motion.span>
           })}

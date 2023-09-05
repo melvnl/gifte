@@ -29,19 +29,19 @@ export default function Screen7() {
   return (
     <div className=''>
       <Header />
-      <div ref={ref} className=" mt-[76px] flex flex-col justify-between px-5">
-        <div className="flex justify-between font-RecklessNueu font-semibold text-gray">
+      <div ref={ref} className=" mt-2.5 flex flex-col justify-between px-5">
+        <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
           <h1 className=' text-base'>Transparent Tulip Showcase</h1>
-          <span className=' text-base'>1/6</span>
+          <span className=' text-base'>1/5</span>
         </div>
-        <div className=" font-Inter text-[#6D6D6D] text-justify ">
+        <div className=" font-Inter text-[#6D6D6D] text-justify leading-5 ">
           {phrares.map((phrase, index) => {
-            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-xs'>
+            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
               {phrase}
             </motion.span>
           })}
         </div>
-        <Image src="/images/flower.png" width={425} height={502} alt='' />
+        <Image src="/images/flower.png" width={425} height={502} alt='' className=' mt-3' />
       </div>
     </div >
   )

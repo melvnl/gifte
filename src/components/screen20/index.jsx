@@ -4,14 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import classNames from 'classnames';
-
-const phrares = [
-  "A gift from us! Discount up to IDR 999.999",
-  "As a token of our gratitude, earn limited discount  ",
-  "when purchasing this collection with this ",
-  "following",
-]
+import Image from 'next/image';
 
 export default function Screen20() {
 
@@ -28,22 +21,8 @@ export default function Screen20() {
   return (
     <div>
       <Header />
-      <div ref={ref} className="text-[#6D6D6D] text-center flex flex-col px-5 py-3 justify-center items-center mt-[238px]">
-        {
-          phrares.map((phrase, index) => {
-            return <div key={index} className={classNames(index === 0 ? "font-RecklessNueu" : "font-Inter ", "overflow-hidden mb-1 text-center")}>
-              {index === 0 ? (
-                <motion.h1 custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' font-medium text-gray text-base'>
-                  {phrase}
-                </motion.h1>
-              ) : (
-                <motion.p custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-[#6D6D6D] text-sm'>
-                  {phrase}
-                </motion.p>
-              )}
-            </div>
-          })
-        }
+      <div className=" mt-6 flex justify-center px-5 py-3">
+        <Image src="/images/sign-up-flow-3.svg" width={292} height={520} alt='' quality={100} />
       </div>
     </div >
   )

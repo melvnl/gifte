@@ -15,15 +15,18 @@ import Screen10 from '@/src/components/screen10';
 import Screen11 from '@/src/components/screen11';
 import Screen12 from '@/src/components/screen12';
 import Screen13 from '@/src/components/screen13';
+import Screen14 from '@/src/components/screen14';
 import Screen15 from '@/src/components/screen15';
 import Screen16 from '@/src/components/screen16';
-import Screen19 from '@/src/components/screen19';
-import Screen20 from '@/src/components/screen20';
-import Screen21 from '@/src/components/screen21';
-import Screen22 from '@/src/components/screen22';
-import Screen23 from '@/src/components/screen23';
-import Screen24 from '@/src/components/screen24';
-import Screen25 from '@/src/components/screen25';
+import Screen19 from '@/src/components/screen17';
+import Screen20 from '@/src/components/screen18';
+import Screen21 from '@/src/components/screen19';
+import Screen22 from '@/src/components/screen19';
+import Screen17 from '@/src/components/screen17';
+import Screen18 from '@/src/components/screen18';
+// import Screen23 from '@/src/components/screen21';
+// import Screen24 from '@/src/components/screen23';
+// import Screen25 from '@/src/components/screen24';
 
 const specialScreen = {
   21: {
@@ -139,17 +142,18 @@ export default function Home() {
         {visible === 11 && <Screen11 />}
         {visible === 12 && <Screen12 />}
         {visible === 13 && <Screen13 />}
+        {visible === 14 && <Screen14 />}
         {visible === 15 && <Screen15 />}
         {visible === 16 && <Screen16 />}
-        {/* {visible === 17 && <Screen17 />} */}
-        {/* {visible === 18 && <Screen18 />} */}
+        {visible === 17 && <Screen17 />}
+        {visible === 18 && <Screen18 />}
         {visible === 19 && <Screen19 />}
         {visible === 20 && <Screen20 />}
         {visible === 21 && <Screen21 />}
         {visible === 22 && <Screen22 />}
-        {visible === 23 && <Screen23 />}
+        {/* {visible === 23 && <Screen23 />}
         {visible === 24 && <Screen24 />}
-        {visible === 25 && <Screen25 />}
+        {visible === 25 && <Screen25 />} */}
       </AnimatePresence>
       {visible > 1 && <ProgressBar
         special={visible >= 21 && visible <= 25}

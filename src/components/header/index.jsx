@@ -5,8 +5,8 @@ export default function Header({ title = "Garden of Glow", subtitle = "An experi
   return (
     <div className=' flex justify-between relative px-5 py-3'>
       <div className="">
-        <h1 className='font-RecklessNueu text-xs font-medium leading-4 ' > {title}</h1>
-        <p className=' font-Inter text-[10px] text-[#6D6D6D] font-medium leading-[14px]'>{subtitle}</p>
+        <h1 className='font-RecklessNueu text-sm font-medium leading-5 ' > {title}</h1>
+        <p className=' font-Inter text-xs text-[#6D6D6D] font-medium leading-4'>{subtitle}</p>
       </div>
       <MobileMenu />
     </div>

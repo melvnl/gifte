@@ -30,13 +30,13 @@ export default function Screen15() {
     <div className=''>
       <Header />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
-        <div className="flex justify-between font-RecklessNueu font-semibold text-gray">
+        <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
           <h1 className=' text-base'>Tulip Showcase</h1>
           <span className=' text-base'>5/5</span>
         </div>
-        <div className=" text-[#6D6D6D] text-justify">
+        <div className=" text-[#6D6D6D] text-justify leading-5">
           {phrares.map((phrase, index) => {
-            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-xs'>
+            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
               {phrase}
             </motion.span>
           })}
