@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import Typewriter from 'typewriter-effect';
+import { Typewriter } from 'react-simple-typewriter'
 
 const leftCol = [
   "This is still a placeholder text, basically a story of the collection and digital experience description. Step into a world where nature's poetry meets artistry. Our Botanical Elegance collection is not merely a bouquet of flowers; it is a living, breathing masterpiece that pays homage to the exquisite beauty of the natural world.",
@@ -27,14 +27,14 @@ export default function Screen6() {
     <div className=' px-5 py-3'>
       <Header />
       <div ref={ref} className=" mt-[76px] flex flex-row justify-between gap-4">
-        <div className=" w-full  text-gray text-justify">
+        <div className=" w-full  text-gray ">
           <Typewriter
-            options={{
-              strings: leftCol,
-              autoStart: true,
-              loop: false,
-              delay: 50
-            }}
+            words={leftCol}
+            loop={1}
+            cursor
+            cursorStyle='|'
+            typeSpeed={150}
+            deleteSpeed={500000}
           />
         </div>
       </div>
