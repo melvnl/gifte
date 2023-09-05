@@ -43,7 +43,7 @@ export default function Home() {
       setTextVisible(false);
     }
 
-    if (maskSizeProgress >= 0.8) {
+    if (maskSizeProgress >= 0.6) {
       setState((prev) => ({
         ...prev,
         hasPassedDoor: true
