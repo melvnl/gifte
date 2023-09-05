@@ -68,13 +68,19 @@ export default function Home() {
           <Image src="/images/flower.png" width={425} height={755} alt='' className=' w-full max-w-[425px] object-cover' />
         </div>
       </div>
-      <div className=" text-white w-fit sticky z-50 mx-auto left-1/5 bottom-[20px] transition-transform delay-300 ">Scroll up to explore the exhibition</div>
-      <ProgressBar
-        special={false}
-        title=""
-        subtitle=""
-        progress={2 / 26}
-      />
+      {
+        !textVisible && (
+          <div className="">
+            <div className=" text-white w-fit sticky z-100 mx-auto left-1/5 bottom-[20px] transition-transform delay-300 ">Scroll up to explore the exhibition</div>
+            <ProgressBar
+              special={false}
+              title=""
+              subtitle=""
+              progress={2 / 26}
+            />
+          </div>
+        )
+      }
     </main >
   )
 }

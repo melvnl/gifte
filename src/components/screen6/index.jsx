@@ -24,9 +24,9 @@ export default function Screen6() {
   });
 
   return (
-    <div className=' px-5 py-3'>
+    <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-[76px] flex flex-row justify-between gap-4">
+      <div ref={ref} className=" mt-[76px] flex flex-row justify-between gap-4 px-5 py-3">
         <div className=" w-full  text-gray ">
           <Typewriter
             words={leftCol}
