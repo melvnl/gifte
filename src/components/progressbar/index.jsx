@@ -28,7 +28,7 @@ export default function ProgressBar({
           </div>
         </div>
       ) : (
-        <div className=" text-white fixed bottom-0 w-screen [background:linear-gradient(180deg,_rgba(17,_17,_17,_0)_0%,_rgba(17,_17,_17,_0.2)_100%)] px-5 py-3">
+        <div className=" text-white fixed z-50 bottom-0 w-screen [background:linear-gradient(180deg,_rgba(17,_17,_17,_0)_0%,_rgba(17,_17,_17,_0.2)_100%)] px-5 py-3">
           <h1>{title}</h1>
           <p>{subtitle}</p>
           <div className=" mt-3 border w-full max-w-[385px] border-transparent bg-[#B0B0B0] rounded-3xl">

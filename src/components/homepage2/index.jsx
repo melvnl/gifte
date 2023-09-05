@@ -4,10 +4,11 @@ import styles from './homepage2.module.css'
 import Image from 'next/image';
 import classNames from 'classnames';
 import { useGlobalState } from '@/context/GlobalStateProvider';
+import ProgressBar from '../progressbar';
 
 export default function Home() {
 
-  const [colorChange, setColorChange] = useState(false);
+  const [textVisible, setTextVisible] = useState(true);
   const { state, setState } = useGlobalState();
 
   const container = useRef(null);
@@ -38,9 +39,8 @@ export default function Home() {
       stickyMask.current.style.webkitMaskSize = (initialMaskSize + maskSizeProgress) * 100 + "%";
     }
 
-    setColorChange(false);
-    if (maskSizeProgress >= 0.45) {
-      setColorChange(true);
+    if (maskSizeProgress >= 0.35) {
+      setTextVisible(false);
     }
 
     if (maskSizeProgress >= 0.8) {
@@ -59,11 +59,22 @@ export default function Home() {
   return (
     <main className={classNames(state.hasPassedDoor && styles.main2, styles.main)}>
       <div ref={container} className={classNames(state.hasPassedDoor && styles.container2, styles.container)}>
-        <div className={classNames(colorChange ? "text-black" : "text-white", "w-fit sticky z-50 mx-auto left-1/3 top-[250px] transition-transform delay-300 ")}>Keep scrolling to enter</div>
+        {textVisible && (<div className=" w-fit sticky z-50 mx-auto left-1/3 top-[250px] transition-transform delay-300 flex flex-col items-center justify-center ">
+          <div className="text-white">Keep scrolling to enter</div>
+          <Image src="/icons/white-arrow.svg" alt='' width={12} height={0} className='animate-bounce text-white mt-4 ' />
+        </div>)}
+
         <div ref={stickyMask} className={styles.stickyMask}>
           <Image src="/images/flower.png" width={425} height={755} alt='' className=' w-full max-w-[425px] object-cover' />
         </div>
       </div>
+      <div className=" text-white w-fit sticky z-50 mx-auto left-1/5 bottom-[20px] transition-transform delay-300 ">Scroll up to explore the exhibition</div>
+      <ProgressBar
+        special={false}
+        title=""
+        subtitle=""
+        progress={2 / 26}
+      />
     </main >
   )
 }
