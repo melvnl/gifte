@@ -28,9 +28,9 @@ export default function Homepage() {
       <div className=" absolute -ml-[30px] left-1/2 top-[10px] w-[60px] h-[32px]">
         <Image src="/icons/gifte.png" alt='' width={60} height={32} />
       </div>
-      <div className=" flex justify-between">
-        <Image src="/images/home-img-2.png" alt='' width={180} height={253} />
-        <Image src="/images/home-img-1.png" alt='' width={180} height={253} />
+      <div className=" grid grid-cols-2 gap-3 ">
+        <Image src="/images/home-img-1.png" alt='' width={720} height={1012} />
+        <Image src="/images/home-img-2.png" alt='' width={720} height={1012} quality={100} />
       </div>
       <div ref={ref} className=" my-8 text-gray text-center">
         {
@@ -49,9 +49,9 @@ export default function Homepage() {
           })
         }
       </div>
-      <div className=" flex justify-between">
-        <Image src="/images/home-img-3.png" alt='' width={180} height={253} />
-        <Image src="/images/home-img-4.png" alt='' width={180} height={253} />
+      <div className=" grid grid-cols-2 gap-3">
+        <Image src="/images/home-img-3.png" alt='' width={720} height={1012} quality={100} />
+        <Image src="/images/home-img-4.png" alt='' width={720} height={1012} quality={100} />
       </div>
       <div className=" font-Inter absolute bottom-0 items-center left-1/2 text-gray">
         <p className=' -ml-12 mb-6'>Scroll to enter</p>

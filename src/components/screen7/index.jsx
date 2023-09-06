@@ -26,7 +26,7 @@ export default function Screen7() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-7-bg.png')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-7-bg.jpg')] bg-no-repeat bg-cover">
       <Header transparent={true} />
       <div ref={ref} className=" mt-2.5 flex flex-col justify-between bg-transparent px-5">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">

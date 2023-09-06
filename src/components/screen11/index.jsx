@@ -27,7 +27,7 @@ export default function Screen11() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-11-bg.png')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-11-bg.jpg')] bg-no-repeat bg-cover">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">

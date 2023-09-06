@@ -71,7 +71,7 @@ export default function Screen24() {
       <div className=" mt-6 flex flex-col justify-center px-5 py-3">
         <div className=" text-center mb-5">
           <h1 className=' font-RecklessNueu text-[22px] text-gray leading-7 mb-1'>Shop the Collection</h1>
-          <p className=' font-Inter text-sm text-[#4F4F4F] leading-5'>All flowers ready in fresh & artificial type</p>
+          <p className=' font-Inter text-sm text-[#4F4F4F] leading-5'>Ready in fresh, preserved & artificial types</p>
         </div>
         <div className="">
           {collections.map((collection, index) => {

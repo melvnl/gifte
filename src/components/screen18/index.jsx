@@ -7,7 +7,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 const phrares = [
-  "A gift from us! Discount up to IDR 999.999",
+  "A gift from us! Discount up to IDR 50,000",
   "As a token of our gratitude, earn limited discount  ",
   "when purchasing this collection with this ",
   "following",
