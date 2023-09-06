@@ -22,7 +22,7 @@ export default function Screen22() {
     <div>
       <Header />
       <div className="flex flex-col items-center justify-center h-screen pt-16">
-        <Image src="/images/sign-up-flow-4.svg" width={292} height={520} alt='' quality={100} />
+        <Image src="/images/sign-up-flow-4.png" width={292} height={520} alt='' quality={100} />
       </div>
     </div >
   )

@@ -36,7 +36,7 @@ body {
   background: linear-gradient(to right,
         #FFF 20%,
         #FFF 30%,
-        #FFF 70%,
+        #3D3D3D 70%,
         #3D3D3D 80%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -44,6 +44,20 @@ body {
     /* text-fill-color: transparent; */
     background-size: 500% auto;
     animation: textShine 2.5s ease-in-out infinite alternate;
+}
+
+.animate-gradient2 {
+  background: linear-gradient(to right,
+      #FFF 20%,
+      #FFF 30%,
+      #3D3D3D 70%,
+      #3D3D3D 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-fill-color: transparent; */
+  background-size: 500% auto;
+  animation: textShine 3s ease-in-out infinite alternate;
 }
 
 @keyframes textShine {

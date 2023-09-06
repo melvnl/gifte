@@ -22,8 +22,8 @@ export default function Screen26() {
   return (
     <div className='px-5 py-3 flex flex-col justify-center items-center relative bg-black h-screen'>
       <div className=" bg-gradient-to-r from-white via-white to-gray text-transparent bg-clip-text bg-300% animate-gradient text-[#6D6D6D] mt-6 flex flex-col">
-        <p className=' font-Inter text-sm leading-5 font-medium mb-1'>A Digital Experience by</p>
-        <h1 className=' font-RecklessNueu text-[22px] font-medium'>Gifte & Circles</h1>
+        <p className=' font-Inter text-sm leading-5 font-medium mb-1 animate-gradient'>A Digital Experience by</p>
+        <h1 className=' font-RecklessNueu text-[22px] font-medium animate-gradient2'>Gifte & Circles</h1>
       </div>
       <Link href="https://www.gifteflorist.com" className=" p-2.5 rounded-lg w-fit bg-white mt-5">
         <p className=' font-Inter text-sm leading-5 font-medium'>

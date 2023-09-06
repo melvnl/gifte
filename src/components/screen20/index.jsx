@@ -22,7 +22,7 @@ export default function Screen20() {
     <div>
       <Header />
       <div className=" mt-6 flex justify-center px-5 py-3 pt-16">
-        <Image src="/images/sign-up-flow-2.svg" width={292} height={520} alt='' quality={100} />
+        <Image src="/images/sign-up-flow-2.png" width={292} height={520} alt='' quality={100} />
       </div>
     </div >
   )

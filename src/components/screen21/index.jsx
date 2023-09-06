@@ -22,7 +22,7 @@ export default function Screen21() {
     <div>
       <Header />
       <div className=" mt-6 flex justify-center px-5 py-3 pt-16">
-        <Image src="/images/sign-up-flow-3.svg" width={292} height={520} alt='' quality={100} className=' mt-auto' />
+        <Image src="/images/sign-up-flow-3.png" width={292} height={520} alt='' quality={100} className=' mt-auto' />
       </div>
     </div >
   )
