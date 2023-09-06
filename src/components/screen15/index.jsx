@@ -28,8 +28,8 @@ export default function Screen15() {
     <div className=" h-screen bg-[url('/images/screen-15-bg.png')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 ">
-        <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
-          <h1 className=' text-base'>Blossom Bouquet</h1>
+        <div className="flex justify-between font-RecklessNueu text-gray mb-1">
+          <h1 className=' font-medium text-base'>Blossom Bouquet</h1>
           <span className=' text-base'>5/5</span>
         </div>
         <div className=" text-[#6D6D6D] text-justify leading-5">

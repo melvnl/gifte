@@ -29,8 +29,8 @@ export default function Screen9() {
     <div className=" h-screen bg-[url('/images/screen-9-bg.png')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className="flex flex-col justify-between px-5 py-3">
-        <div className="font-RecklessNueu font-semibold text-gray flex justify-between mb-1">
-          <h1 className=' text-base'>Euphoria Floral Tag</h1>
+        <div className="font-RecklessNueu text-gray flex justify-between mb-1">
+          <h1 className=' font-medium text-base'>Euphoria Floral Tag</h1>
           <span className=' text-base'>2/5</span>
         </div>
         <div className=" text-[#6D6D6D] text-justify leading-5">

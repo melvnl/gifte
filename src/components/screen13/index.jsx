@@ -29,8 +29,8 @@ export default function Screen13() {
     <div className=" h-screen bg-[url('/images/screen-13-bg.jpg')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
-        <div className="flex justify-between font-RecklessNueu text-gray font-semibold mb-1">
-          <h1 className=' text-base'>Cupid Heart</h1>
+        <div className="flex justify-between font-RecklessNueu text-gray mb-1">
+          <h1 className=' font-medium text-base'>Cupid Heart</h1>
           <span className=' text-base'>4/5</span>
         </div>
         <div className=" text-[#6D6D6D] text-justify leading-5">
