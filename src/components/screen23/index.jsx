@@ -6,7 +6,7 @@ import Header from '../header';
 import React from 'react';
 import Image from 'next/image';
 
-export default function Screen21() {
+export default function Screen23() {
 
   const animation = {
     initial: { y: "100%" },
@@ -22,7 +22,7 @@ export default function Screen21() {
     <div>
       <Header />
       <div className=" mt-6 flex justify-center px-5 py-3">
-        <Image src="/images/sign-up-flow-3.svg" width={292} height={520} alt='' quality={100} className=' mt-auto' />
+        <Image src="/images/sign-up-flow-5.svg" width={292} height={520} alt='' quality={100} />
       </div>
     </div >
   )

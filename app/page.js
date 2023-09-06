@@ -18,34 +18,34 @@ import Screen13 from '@/src/components/screen13';
 import Screen14 from '@/src/components/screen14';
 import Screen15 from '@/src/components/screen15';
 import Screen16 from '@/src/components/screen16';
-import Screen19 from '@/src/components/screen17';
-import Screen20 from '@/src/components/screen18';
-import Screen21 from '@/src/components/screen19';
-import Screen22 from '@/src/components/screen19';
 import Screen17 from '@/src/components/screen17';
 import Screen18 from '@/src/components/screen18';
-// import Screen23 from '@/src/components/screen21';
+import Screen19 from '@/src/components/screen19';
+import Screen20 from '@/src/components/screen20';
+import Screen21 from '@/src/components/screen21';
+import Screen22 from '@/src/components/screen22';
+import Screen23 from '@/src/components/screen23';
 // import Screen24 from '@/src/components/screen23';
 // import Screen25 from '@/src/components/screen24';
 
 const specialScreen = {
-  21: {
+  19: {
     title: "Step 1",
     subtitle: "Sign up / log in to your account through our website at www.gifteflorist.com"
   },
-  22: {
+  20: {
     title: "Step 2",
     subtitle: "Click the menu on the top left, click your name & go to your account page."
   },
-  23: {
+  21: {
     title: "Step 3",
     subtitle: "Create a reminder to the lucky one who is going to receive this special collection."
   },
-  24: {
+  22: {
     title: "Step 4",
     subtitle: "Screenshot and save the reminder creation success proof to show it to the booth PIC."
   },
-  25: {
+  23: {
     title: "Step 5",
     subtitle: "Share your moment & experience on instagram story then tag @gifte.id & @__circlescreative and show it to the booth PIC to get your gift!"
   },
@@ -129,6 +129,8 @@ export default function Home() {
   }, [state.hasPassedDoor])
 
 
+  console.log(visible);
+
   return (
     <div ref={ref} className={classNames(visible === 1 ? " " : " h-screen overflow-hidden touch-none", " no-scrollbar")}>
       <AnimatePresence mode='wait'>
@@ -151,14 +153,14 @@ export default function Home() {
         {visible === 20 && <Screen20 />}
         {visible === 21 && <Screen21 />}
         {visible === 22 && <Screen22 />}
-        {/* {visible === 23 && <Screen23 />}
-        {visible === 24 && <Screen24 />}
+        {visible === 23 && <Screen23 />}
+        {/* {visible === 24 && <Screen24 />}
         {visible === 25 && <Screen25 />} */}
       </AnimatePresence>
       {visible > 1 && <ProgressBar
-        special={visible >= 21 && visible <= 25}
-        title={visible >= 21 && visible <= 25 ? specialScreen[visible].title : ""}
-        subtitle={visible >= 21 && visible <= 25 ? specialScreen[visible].subtitle : ""}
+        special={visible >= 19 && visible <= 23}
+        title={visible >= 19 && visible <= 23 ? specialScreen[visible].title : ""}
+        subtitle={visible >= 19 && visible <= 23 ? specialScreen[visible].subtitle : ""}
         progress={visible / 26}
       />}
     </div>
