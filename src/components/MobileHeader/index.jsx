@@ -2,8 +2,7 @@ import cn from "classnames";
 import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
 import { useState, useEffect } from "react";
-import styles from './mobile.module.css'
-
+import styles from './mobile.module.css';
 
 const links = [
   { href: "/", text: "Restart Experience" },
@@ -49,25 +48,31 @@ export default function MobileMenu() {
         <CrossIcon data-hide={!isMenuOpen} />
       </button>
       {isMenuMounted && (
-        <ul
-          className={cn(
-            styles.menu,
-            "flex flex-col font-RecklessNueu absolute border-t border-[#E7E7E7] top-12 bg-white px-5 py-3",
-            isMenuRendered && styles.menuRendered
-          )}
-        >
-          {links.map(({ href, text }) => (
-            <li
-              key={text}
-              className="text-gray text-sm font-semibold"
-              style={{ transitionDelay: "150ms" }}
-            >
-              <Link href={href}>
-                <div className="flex w-auto pb-4">{text}</div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className={cn(styles.menuWrapper, { [styles.menuWrapperOpen]: isMenuOpen })}>
+          <div
+            className={cn(styles.overlay, { [styles.overlayOpen]: isMenuOpen })}
+            onClick={toggleMenu}
+          ></div>
+          <ul
+            className={cn(
+              styles.menu,
+              "flex flex-col font-RecklessNueu absolute border-t border-[#E7E7E7] top-12 bg-white px-5 py-3",
+              isMenuRendered && styles.menuRendered
+            )}
+          >
+            {links.map(({ href, text }) => (
+              <li
+                key={text}
+                className="text-gray text-sm font-semibold"
+                style={{ transitionDelay: "150ms" }}
+              >
+                <Link href={href}>
+                  <div className="flex w-auto pb-4">{text}</div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </>
   );
