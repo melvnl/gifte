@@ -6,7 +6,7 @@ import Header from '../header';
 import React from 'react';
 import Image from 'next/image';
 
-export default function Screen30() {
+export default function Screen26() {
 
   const animation = {
     initial: { y: "100%" },

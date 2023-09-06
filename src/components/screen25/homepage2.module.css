@@ -1,0 +1,47 @@
+.main {
+  margin-bottom: 100vh;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main2 {
+  margin-bottom: 100vh;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:hidden
+}
+
+
+.container {
+  position: relative;
+  height: 200vh;
+  background-color: #000000;
+}
+
+.container2 {
+  position: relative;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.stickyMask {
+  position: sticky;
+  top: 0;
+  /* height: calc(100vh + 120px); */
+  justify-content: center;
+  mask-image: url('/images/door.svg');
+  mask-position: center bottom;
+  mask-repeat: no-repeat;
+  mask-size: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stickyMask .video {
+  width: 100%;
+  max-width: 425px;
+  object-fit: cover;
+}
