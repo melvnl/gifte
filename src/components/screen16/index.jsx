@@ -27,7 +27,7 @@ export default function Screen16() {
   });
 
   return (
-    <div className=' py-3 h-screen '>
+    <div className='h-screen '>
       <Header />
       <div ref={ref} className=" mt-10 h-full ">
         <Image src="/images/screen-16-img.png" width={405 * 2} height={535 * 2} alt='' className=' w-full -ml-4' />
