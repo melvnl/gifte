@@ -146,7 +146,7 @@ export default function Home() {
   return (
     <div ref={ref} className={classNames(visible === 1 || visible === 24 ? " " : " h-screen overflow-hidden touch-none", " no-scrollbar")}>
       <AnimatePresence mode='wait'>
-        {/* {visible === 0 && <Homepage />}
+        {visible === 0 && <Homepage />}
         {visible === 1 && <Homepage2 />}
         {visible === 6 && <Screen6 />}
         {visible === 7 && <Screen7 />}
@@ -167,8 +167,7 @@ export default function Home() {
         {visible === 22 && <Screen22 />}
         {visible === 23 && <Screen23 />}
         {visible === 24 && <Screen24 />}
-        {visible === 25 && <Screen25 />} */}
-        <Screen6 />
+        {visible === 25 && <Screen25 />}
       </AnimatePresence>
       {visible > 1 && <ProgressBar
         special={visible >= 19 && visible <= 23}

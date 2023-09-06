@@ -20,6 +20,12 @@ export default function MobileMenu() {
     }
   );
 
+  const handleLinkClick = (index) => {
+    if (index === 0) {
+      window.location.reload();
+    }
+  };
+
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
@@ -60,10 +66,11 @@ export default function MobileMenu() {
               isMenuRendered && styles.menuRendered
             )}
           >
-            {links.map(({ href, text }) => (
+            {links.map(({ href, text }, index) => (
               <li
                 key={text}
                 className="text-gray text-sm font-semibold"
+                onClick={() => handleLinkClick(index)}
                 style={{ transitionDelay: "150ms" }}
               >
                 <Link href={href}>
