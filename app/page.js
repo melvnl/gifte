@@ -25,8 +25,7 @@ import Screen20 from '@/src/components/screen20';
 import Screen21 from '@/src/components/screen21';
 import Screen22 from '@/src/components/screen22';
 import Screen23 from '@/src/components/screen23';
-// import Screen24 from '@/src/components/screen23';
-// import Screen25 from '@/src/components/screen24';
+import Screen24 from '@/src/components/screen24';
 
 const specialScreen = {
   19: {
@@ -81,7 +80,7 @@ export default function Home() {
             setTimeout(() => {
               if (visible === 25) {
                 setVisible(0);
-              } else if (visible !== 1) {
+              } else if (visible !== 1 && visible !== 24) {
                 setVisible((prevVisible) => prevVisible + 1);
               }
               setIsDelaying(false);
@@ -90,7 +89,7 @@ export default function Home() {
           else {
             setIsDelaying(true);
             setTimeout(() => {
-              if (visible > 0) {
+              if (visible > 0 && visible !== 24) {
                 setVisible((prevVisible) => prevVisible - 1);
               }
               setIsDelaying(false);
@@ -113,6 +112,12 @@ export default function Home() {
         hasPassedDoor: false,
       }));
     }
+    if (visible > 24) {
+      setState((prev) => ({
+        ...prev,
+        hasPassedCollection: false,
+      }));
+    }
 
     window.addEventListener('touchstart', handleSwipe);
 
@@ -126,13 +131,16 @@ export default function Home() {
     if (state.hasPassedDoor) {
       setVisible((prevVisible) => prevVisible + 5);
     }
-  }, [state.hasPassedDoor])
+    if (state.hasPassedCollection) {
+      setVisible((prevVisible) => prevVisible + 1);
+    }
+  }, [state.hasPassedCollection, state.hasPassedDoor])
 
 
   console.log(visible);
 
   return (
-    <div ref={ref} className={classNames(visible === 1 ? " " : " h-screen overflow-hidden touch-none", " no-scrollbar")}>
+    <div ref={ref} className={classNames(visible === 1 || visible === 24 ? " " : " h-screen overflow-hidden touch-none", " no-scrollbar")}>
       <AnimatePresence mode='wait'>
         {visible === 0 && <Homepage />}
         {visible === 1 && <Homepage2 />}
@@ -154,8 +162,8 @@ export default function Home() {
         {visible === 21 && <Screen21 />}
         {visible === 22 && <Screen22 />}
         {visible === 23 && <Screen23 />}
-        {/* {visible === 24 && <Screen24 />}
-        {visible === 25 && <Screen25 />} */}
+        {visible === 24 && <Screen24 />}
+        {/* {visible === 25 && <Screen25 />} */}
       </AnimatePresence>
       {visible > 1 && <ProgressBar
         special={visible >= 19 && visible <= 23}

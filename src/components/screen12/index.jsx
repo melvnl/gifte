@@ -29,7 +29,7 @@ export default function Screen12() {
   return (
     <div>
       <Header />
-      <div ref={ref} className=" mt-3">
+      <div ref={ref} className=" mt-3 pt-16">
         <div className="flex flex-col relative">
           <Image src="/images/screen-12-img-1.png" width={340} height={200} alt='' />
           <div className=" absolute top-1/4 -right-10 max-w-[240px] max-h-[190px] overflow-hidden">

@@ -21,7 +21,7 @@ export default function Screen23() {
   return (
     <div>
       <Header />
-      <div className=" mt-6 flex justify-center px-5 py-3">
+      <div className=" mt-6 flex justify-center px-5 py-3 pt-16">
         <Image src="/images/sign-up-flow-5.svg" width={292} height={520} alt='' quality={100} />
       </div>
     </div >

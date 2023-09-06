@@ -30,7 +30,7 @@ export default function Screen13() {
   return (
     <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
+      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 pt-16">
         <div className="flex justify-between font-RecklessNueu text-gray font-semibold mb-1">
           <h1 className=' text-base'>Cupid Heart</h1>
           <span className=' text-base'>4/5</span>

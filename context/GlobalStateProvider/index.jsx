@@ -16,6 +16,7 @@ const GlobalStateProvider = ({
   children,
   value = {
     hasPassedDoor: false,
+    hasPassedCollection: false,
   },
 }) => {
   const [state, setState] = useState(value);

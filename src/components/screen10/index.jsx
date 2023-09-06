@@ -31,7 +31,7 @@ export default function Screen10() {
   return (
     <div className=' text-[#6D6D6D] '>
       <Header />
-      <div className=" text-center ">
+      <div className=" text-center pt-16">
         <Image src="/images/screen-10-flower-1.png" width={425} height={175} alt='' />
         <h1 className=' font-RecklessNueu my-2'>Glow</h1>
         <Image src="/images/screen-10-flower-2.png" width={425} height={175} alt='' />

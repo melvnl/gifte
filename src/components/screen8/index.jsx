@@ -29,7 +29,7 @@ export default function Screen8() {
   return (
     <div className=''>
       <Header />
-      <div className=" text-gray mt-6 px-5">
+      <div className=" text-gray mt-6 px-5 pt-16">
         <Image src="/images/screen-8-img-1.png" width={320} height={200} alt='' className=' mb-3' />
         <div className=" -ml-5 flex">
           <Image src="/images/screen-8-img-2.png" width={174} height={200} alt='' />

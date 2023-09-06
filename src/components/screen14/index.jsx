@@ -29,7 +29,7 @@ export default function Screen14() {
   return (
     <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-2.5 grid grid-cols-2 gap-2 px-5">
+      <div ref={ref} className=" mt-2.5 grid grid-cols-2 gap-2 px-5 pt-16">
         <Image src="/images/screen-14-img-1.png" width={156} height={242} alt='' />
         <div className=" flex flex-col">
           <h1 className=' font-RecklessNueu font-medium text-lg text-black'>Always</h1>
