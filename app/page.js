@@ -151,15 +151,15 @@ export default function Home() {
         {visible === 1 && <Homepage2 />}
         {visible === 6 && <Screen6 />}
         {visible === 7 && <Screen7 />}
-        {visible === 8 && <Screen8 />}
+        {visible === 8 && <Screen16 />}
         {visible === 9 && <Screen9 />}
-        {visible === 10 && <Screen10 />}
+        {visible === 10 && <Screen12 />}
         {visible === 11 && <Screen11 />}
-        {visible === 12 && <Screen12 />}
+        {visible === 12 && <Screen10 />}
         {visible === 13 && <Screen13 />}
         {visible === 14 && <Screen14 />}
         {visible === 15 && <Screen15 />}
-        {visible === 16 && <Screen16 />}
+        {visible === 16 && <Screen8 />}
         {visible === 17 && <Screen17 />}
         {visible === 18 && <Screen18 />}
         {visible === 19 && <Screen19 />}

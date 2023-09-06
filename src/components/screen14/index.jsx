@@ -29,15 +29,15 @@ export default function Screen14() {
   return (
     <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-2.5 grid grid-cols-2 gap-2 px-5 pt-16">
+      <div ref={ref} className=" mt-2.5 grid grid-cols-2 gap-2 px-5">
         <Image src="/images/screen-14-img-1.png" width={156} height={242} alt='' />
         <div className=" flex flex-col">
-          <h1 className=' font-RecklessNueu font-medium text-lg text-black'>Always</h1>
+          <h1 className=' font-RecklessNueu font-medium text-lg text-gray leading-6'>Always</h1>
           <Image src="/images/screen-14-img-2.png" width={156} height={242} alt='' />
         </div>
         <div className=" -mt-6 flex flex-col">
           <Image src="/images/screen-14-img-3.png" width={156} height={242} alt='' />
-          <h1 className=' font-RecklessNueu font-medium text-lg text-black mt-2'>Be Yourself</h1>
+          <h1 className=' font-RecklessNueu font-medium text-lg text-gray leading-6 mt-2'>Be Yourself</h1>
         </div>
         <Image src="/images/screen-14-img-4.png" width={156} height={242} alt='' />
       </div>
