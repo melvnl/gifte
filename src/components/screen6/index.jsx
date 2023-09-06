@@ -39,7 +39,6 @@ export default function Screen6() {
             cursorStyle=''
             typeSpeed={15}
             onLoopDone={() => {
-              console.log("!@3")
               setStart(true)
             }}
           />
@@ -51,8 +50,6 @@ export default function Screen6() {
             cursor
             cursorStyle=''
             typeSpeed={15}
-            onLoopDone={() => { console.log("taik") }}
-          // deleteSpeed={0}
           />)}
         </span>
 

@@ -7,11 +7,10 @@ import React from 'react';
 import Image from 'next/image';
 
 const phrares = [
-  "Two exquisite flowers nestled in holographic art paper. ",
-  "This pill-shaped tag dazzles with vibrant colors in the ",
-  "light, creating a mesmerizing spectacle. Designed to ",
-  "uplift your spirits and transport you to a world where ",
-  "nature and art seamlessly intertwine."
+  "Two exquisite flowers in holographic paper with ",
+  "pill-shaped tag dazzling in vibrant colors under ",
+  "the light, uplifting your spirits taking you to a ",
+  "world where nature and art intertwine.",
 ]
 
 export default function Screen9() {
@@ -27,7 +26,7 @@ export default function Screen9() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-9-bg.png')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-9-bg.png')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className="flex flex-col justify-between px-5 py-3">
         <div className="font-RecklessNueu font-semibold text-gray flex justify-between mb-1">

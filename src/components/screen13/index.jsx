@@ -8,11 +8,9 @@ import Image from 'next/image';
 
 const phrares = [
   "Crafted with love, it cradles a single rose, ",
-  "signifying dedication. The pink represents ",
-  "unwavering love, and the floral details form a ",
-  "cupid's heart and arrow, symbolizing the ",
-  "enchantment of Gifte. It's a cherished token of ",
-  "affection and a heartfelt connection."
+  "symbolizing dedication, unwavering love in pink,  ",
+  "with details forming a cupid's heart and arrow. A",
+  "cherished token of affection and connection. ",
 ]
 
 export default function Screen13() {
@@ -28,7 +26,7 @@ export default function Screen13() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-13-bg.jpg')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-13-bg.jpg')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
         <div className="flex justify-between font-RecklessNueu text-gray font-semibold mb-1">

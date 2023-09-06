@@ -38,9 +38,9 @@ export default function Screen8() {
           </div>
           <h1 className=' font-RecklessNueu mt-3 ml-5'>Glow</h1>
         </div>
-        <div className=" flex flex-col -mt-28 ">
+        <div className=" flex flex-col -mt-28  ">
           <h1 className=' font-RecklessNueu ml-auto'>The</h1>
-          <Image src="/images/screen-8-img-3.png" width={174} height={285} alt='' className=' ml-auto -mr-5' />
+          <Image src="/images/screen-8-img-3.png" width={174 * 1.1} height={285} alt='' className=' ml-auto -mr-5' />
         </div>
       </div>
     </div>

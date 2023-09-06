@@ -25,7 +25,7 @@ export default function Screen15() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-15-bg.png')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-15-bg.png')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 ">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">

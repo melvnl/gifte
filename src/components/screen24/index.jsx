@@ -16,7 +16,7 @@ export const collections = [
     url: "https://www.google.com",
   },
   {
-    title: "Tulip Showcase",
+    title: "Euphoria Floral Tag",
     price: "Artificial IDR 115,000 | Fresh IDR 125,000",
     img: "/images/collections/img-2.png",
     url: "https://www.google.com",

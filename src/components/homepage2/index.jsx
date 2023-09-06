@@ -65,7 +65,7 @@ export default function Home() {
         </div>)}
 
         <div ref={stickyMask} className={styles.stickyMask}>
-          <Image src="/images/flower.png" width={425} height={755} alt='' className=' w-full max-w-[425px] object-cover' />
+          <Image src="/images/flower.png" width={491} height={766} alt='' className=' w-full  object-cover' quality={100} />
         </div>
       </div>
       {

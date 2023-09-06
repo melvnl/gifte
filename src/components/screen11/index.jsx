@@ -4,14 +4,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import Image from 'next/image';
 
 const phrares = [
-  "Nestling flower in an elegant transparent ",
-  "holder. This unique presentation adds serene calmness ",
-  "to your space, as if you're by a garden pond. Revel in ",
-  "petal intricacies and mirrored ripples, a testament to ",
-  "nature's beauty and design fusion."
+  "Nestling flower in an elegant transparent holder,",
+  "adding serene calmness, inviting you to revel in ",
+  "petal intricacies and mirrored ripples—a ",
+  "testament to nature's beauty and design fusion.",
 ]
 
 export default function Screen11() {
@@ -27,7 +25,7 @@ export default function Screen11() {
   });
 
   return (
-    <div className=" h-screen bg-[url('/images/screen-11-bg.jpg')] bg-no-repeat bg-cover">
+    <div className=" h-screen bg-[url('/images/screen-11-bg.jpg')] bg-no-repeat bg-cover bg-center">
       <Header transparent={true} />
       <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">

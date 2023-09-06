@@ -30,16 +30,16 @@ export default function Screen14() {
     <div className=' '>
       <Header />
       <div ref={ref} className=" mt-2.5 grid grid-cols-2 gap-2 px-5">
-        <Image src="/images/screen-14-img-1.jpg" width={156} height={242} alt='' />
+        <Image src="/images/screen-14-img-1.jpg" width={156 * 2} height={242 * 2} alt='' />
         <div className=" flex flex-col">
           <h1 className=' font-RecklessNueu font-medium text-lg text-gray leading-6'>Always</h1>
-          <Image src="/images/screen-14-img-2.jpg" width={156} height={242} alt='' />
+          <Image src="/images/screen-14-img-2.jpg" width={156 * 2} height={242 * 2} alt='' />
         </div>
         <div className=" -mt-6 flex flex-col">
-          <Image src="/images/screen-14-img-3.jpg" width={156} height={242} alt='' />
+          <Image src="/images/screen-14-img-3.jpg" width={156 * 2} height={242 * 2} alt='' />
           <h1 className=' font-RecklessNueu font-medium text-lg text-gray leading-6 mt-2'>Be Yourself</h1>
         </div>
-        <Image src="/images/screen-14-img-4.jpg" width={156} height={242} alt='' />
+        <Image src="/images/screen-14-img-4.jpg" width={156 * 2} height={242 * 2} alt='' />
       </div>
     </div>
   )
