@@ -29,8 +29,8 @@ export default function Homepage() {
         <Image src="/icons/gifte.png" alt='' width={60} height={32} />
       </div>
       <div className=" flex justify-between">
-        <Image src="/images/home-img-1.png" alt='' width={180} height={253} />
         <Image src="/images/home-img-2.png" alt='' width={180} height={253} />
+        <Image src="/images/home-img-1.png" alt='' width={180} height={253} />
       </div>
       <div ref={ref} className=" my-8 text-gray text-center">
         {

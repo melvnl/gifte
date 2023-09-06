@@ -7,7 +7,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const phrares = [
-  "Blending exquisite blooms in an elegant transparent ",
+  "Nestling flower in an elegant transparent ",
   "holder. This unique presentation adds serene calmness ",
   "to your space, as if you're by a garden pond. Revel in ",
   "petal intricacies and mirrored ripples, a testament to ",
@@ -27,9 +27,9 @@ export default function Screen11() {
   });
 
   return (
-    <div className=' '>
-      <Header />
-      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 pt-16">
+    <div className=" h-screen bg-[url('/images/screen-11-bg.png')] bg-no-repeat bg-cover">
+      <Header transparent={true} />
+      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
           <h1 className=' text-base'>Tranquil Floral Handcarry</h1>
           <span className=' text-base'>3/5</span>
@@ -41,7 +41,6 @@ export default function Screen11() {
             </motion.span>
           })}
         </div>
-        <Image src="/images/screen-11-flower.png" width={425} height={502} alt='' className=' mt-3' />
       </div>
     </div>
   )

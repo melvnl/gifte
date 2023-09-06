@@ -7,8 +7,7 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter'
 
 const leftCol = [
-  "This is still a placeholder text, basically a story of the collection and digital experience description. Step into a world where nature's poetry meets artistry. Our Botanical Elegance collection is not merely a bouquet of flowers; it is a living, breathing masterpiece that pays homage to the exquisite beauty of the natural world.",
-  "Each petal, each leaf, and every delicate stem has been meticulously curated and crafted to resemble the timeless treasures found within the hallowed halls of a museum. Each petal, each leaf, and every delicate stem has been meticulously curated and crafted to resemble the timeless treasures found within the hallowed halls of a museum."
+  "The Garden of Glow mini collection draws inspiration from the concept of inner beauty. Each product within this collection is designed with a focus on simplicity, both in its arrangement and packaging. We embrace texture and intricate visual details to elevate your sensory experience",
 ]
 
 export default function Screen6() {
@@ -26,17 +25,15 @@ export default function Screen6() {
   return (
     <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-[76px] flex flex-row justify-between gap-4 px-5 py-3">
-        <div className=" w-full  text-gray ">
-          <Typewriter
-            words={leftCol}
-            loop={1}
-            cursor
-            cursorStyle='|'
-            typeSpeed={15}
-            deleteSpeed={1000000}
-          />
-        </div>
+      <div ref={ref} className=" mt-[76px] flex flex-col text-gray items-center h-screen justify-center leading-5 text-sm gap-4 px-5 py-3">
+        <Typewriter
+          words={leftCol}
+          loop={1}
+          cursor
+          cursorStyle='|'
+          typeSpeed={15}
+          deleteSpeed={1000000}
+        />
       </div>
     </div>
   )

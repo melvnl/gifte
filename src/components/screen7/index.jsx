@@ -7,11 +7,10 @@ import React from 'react';
 import Image from 'next/image';
 
 const phrares = [
-  "This crystal-clear box unveils the intricate beauty of ",
-  "freshly picked tulips as sunlight dances on their vibrant ",
-  "petals. Symbolizing love and new beginnings, these",
-  "tulips stand tall in their transparent sanctuary, reminding ",
-  "us of life's enduring beauty."
+  "A crystal-clear box unveils the intricate beauty",
+  "of freshly picked tulips, symbolizing love and ",
+  "new beginnings as they stand tall in their ",
+  "transparent sanctuary, reminding life’s beauty.",
 ]
 
 export default function Screen7() {
@@ -27,11 +26,11 @@ export default function Screen7() {
   });
 
   return (
-    <div className=''>
-      <Header />
-      <div ref={ref} className=" mt-2.5 flex flex-col justify-between px-5 pt-16">
+    <div className=" h-screen bg-[url('/images/screen-7-bg.png')] bg-no-repeat bg-cover">
+      <Header transparent={true} />
+      <div ref={ref} className=" mt-2.5 flex flex-col justify-between bg-transparent px-5">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
-          <h1 className=' text-base'>Transparent Tulip Showcase</h1>
+          <h1 className=' text-base'>Tulip Showcase</h1>
           <span className=' text-base'>1/5</span>
         </div>
         <div className=" font-Inter text-[#6D6D6D] text-justify leading-5 ">
@@ -41,7 +40,7 @@ export default function Screen7() {
             </motion.span>
           })}
         </div>
-        <Image src="/images/flower.png" width={425} height={502} alt='' className=' mt-3' />
+        {/* <Image src="/images/flower.png" width={425} height={502} alt='' className=' mt-3' /> */}
       </div>
     </div >
   )

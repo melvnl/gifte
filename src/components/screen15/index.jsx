@@ -4,14 +4,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import Image from 'next/image';
 
 const phrares = [
-  "This crystal-clear box unveils the intricate beauty of ",
-  "freshly picked tulips as sunlight dances on their vibrant ",
-  "petals. Symbolizing love and new beginnings, these ",
-  "tulips stand tall in their transparent sanctuary, reminding ",
-  "us of life's enduring beauty."
+  "The fusion of fabric and blossoms creates a ",
+  "living canvas, where each petal is a stroke of ",
+  "color and grace, embodying the beauty of ",
+  "nature's grace with vibrancy and refinement.",
 ]
 
 export default function Screen15() {
@@ -27,11 +25,11 @@ export default function Screen15() {
   });
 
   return (
-    <div className=''>
-      <Header />
-      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 pt-16">
+    <div className=" h-screen bg-[url('/images/screen-15-bg.png')] bg-no-repeat bg-cover">
+      <Header transparent={true} />
+      <div ref={ref} className=" mt-3 flex flex-col justify-between px-5 py-3 ">
         <div className="flex justify-between font-RecklessNueu font-semibold text-gray mb-1">
-          <h1 className=' text-base'>Tulip Showcase</h1>
+          <h1 className=' text-base'>Blossom Bouquet</h1>
           <span className=' text-base'>5/5</span>
         </div>
         <div className=" text-[#6D6D6D] text-justify leading-5">
@@ -41,7 +39,6 @@ export default function Screen15() {
             </motion.span>
           })}
         </div>
-        <Image src="/images/screen-15-flower.png" width={425} height={502} alt='' className='mt-3' />
       </div>
     </div>
   )
