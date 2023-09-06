@@ -9,7 +9,7 @@ import Image from 'next/image';
 const phrares = [
   "Crafted with love, it cradles a single rose, ",
   "symbolizing dedication, unwavering love in pink,  ",
-  "with details forming a cupid's heart and arrow. A",
+  "with details forming a cupid's heart and arrow. A ",
   "cherished token of affection and connection. ",
 ]
 

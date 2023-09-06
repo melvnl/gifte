@@ -6,7 +6,7 @@ import Header from '../header';
 import React from 'react';
 
 const phrares = [
-  "Nestling flower in an elegant transparent holder,",
+  "Nestling flower in an elegant transparent holder, ",
   "adding serene calmness, inviting you to revel in ",
   "petal intricacies and mirrored ripples—a ",
   "testament to nature's beauty and design fusion.",

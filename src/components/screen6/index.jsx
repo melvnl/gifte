@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter'
 
 const leftCol = [
-  " mini collection draws inspiration from the concept of inner beauty. Each product within this collection is designed with a focus on simplicity, both in its arrangement and packaging. We embrace texture and intricate visual details to elevate your sensory experience",
+  " mini collection draws inspiration from the concept of inner beauty. Each product within this collection is designed with a focus on simplicity, both in its arrangement and packaging. We embrace texture and intricate visual details to elevate your sensory experience.",
 ]
 
 export default function Screen6() {
