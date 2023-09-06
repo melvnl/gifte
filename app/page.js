@@ -27,6 +27,7 @@ import Screen22 from '@/src/components/screen22';
 import Screen23 from '@/src/components/screen23';
 import Screen24 from '@/src/components/screen24';
 import Screen25 from '@/src/components/screen25';
+import Screen26 from '@/src/components/screen26';
 
 const specialScreen = {
   19: {
@@ -168,6 +169,7 @@ export default function Home() {
         {visible === 23 && <Screen23 />}
         {visible === 24 && <Screen24 />}
         {visible === 25 && <Screen25 />}
+        {visible === 26 && <Screen26 />}
       </AnimatePresence>
       {visible > 1 && <ProgressBar
         special={visible >= 19 && visible <= 23}

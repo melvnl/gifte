@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Screen26() {
 
@@ -19,11 +20,25 @@ export default function Screen26() {
   });
 
   return (
-    <div className='px-5 py-3'>
-      <Header />
-      <div className=" text-[#6D6D6D] mt-6 flex justify-center">
-        <p className=' text-xs'>A Digital Experience by</p>
-        <h1 className=' text-2xl font-extrabold'>Gifte & Circles</h1>
+    <div className='px-5 py-3 flex flex-col justify-center items-center relative bg-black h-screen'>
+      <div className=" bg-gradient-to-r from-gray via-gray to-white text-transparent bg-clip-text bg-300% animate-gradient text-[#6D6D6D] mt-6 flex flex-col">
+        <p className=' font-Inter text-sm leading-5 font-medium mb-1'>A Digital Experience by</p>
+        <h1 className=' font-RecklessNueu text-[22px] font-medium'>Gifte & Circles</h1>
+      </div>
+      <Link href="https://www.gifteflorist.com" className=" p-2.5 rounded-lg w-fit bg-white mt-5">
+        <p className=' font-Inter text-sm leading-5 font-medium'>
+          Visit Gifte
+        </p>
+      </Link>
+      <div className=" text-white absolute text-center bottom-5">
+        <p className=' font-RecklessNueu leading-[14px] text-[10px] font-medium mb-1'>2023 © Gifte</p>
+        <div className=" flex items-center">
+          <h1 className='leading-[14px] text-[10px] font-medium'>Website by
+          </h1>
+          <Link href="https://www.circlescreative.co" className=" ml-1">
+            <Image src="/icons/circles.svg" width={48} height={10} alt='' />
+          </Link>
+        </div>
       </div>
     </div >
   )
