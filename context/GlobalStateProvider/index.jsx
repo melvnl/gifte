@@ -17,6 +17,7 @@ const GlobalStateProvider = ({
   value = {
     hasPassedDoor: false,
     hasPassedCollection: false,
+    isMenuOpen: false,
   },
 }) => {
   const [state, setState] = useState(value);

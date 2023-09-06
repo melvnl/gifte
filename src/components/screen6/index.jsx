@@ -12,11 +12,6 @@ const leftCol = [
 
 export default function Screen6() {
 
-  const animation = {
-    initial: { y: "100%" },
-    enter: i => ({ y: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i } })
-  }
-
   const { ref, inView, entry } = useInView({
     threshold: 0.75,
     triggerOnce: true
@@ -25,12 +20,12 @@ export default function Screen6() {
   return (
     <div className=' '>
       <Header />
-      <div ref={ref} className=" mt-[76px] flex flex-col text-gray items-center h-screen justify-center leading-5 text-sm gap-4 px-5 py-3">
+      <div ref={ref} className=" mt-[200px] flex flex-col text-gray items-center leading-5 text-sm gap-4 px-5 py-3">
         <Typewriter
           words={leftCol}
           loop={1}
           cursor
-          cursorStyle='|'
+          cursorStyle=''
           typeSpeed={15}
           deleteSpeed={1000000}
         />

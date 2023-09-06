@@ -1,8 +1,9 @@
 import cn from "classnames";
 import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import styles from './mobile.module.css';
+import { useGlobalState } from "@/context/GlobalStateProvider";
 
 const links = [
   { href: "/", text: "Restart Experience" },
@@ -11,9 +12,9 @@ const links = [
 ];
 
 export default function MobileMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { state, setState } = useGlobalState();
   const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
+    state.isMenuOpen,
     {
       enterDelay: 20,
       exitDelay: 300,
@@ -27,11 +28,17 @@ export default function MobileMenu() {
   };
 
   function toggleMenu() {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
+    if (state.isMenuOpen) {
+      setState((prev) => ({
+        ...prev,
+        isMenuOpen: false
+      }));
       document.body.style.overflow = "";
     } else {
-      setIsMenuOpen(true);
+      setState((prev) => ({
+        ...prev,
+        isMenuOpen: true
+      }));
       document.body.style.overflow = "hidden";
     }
   }
@@ -50,13 +57,13 @@ export default function MobileMenu() {
         type="button"
         onClick={toggleMenu}
       >
-        <MenuIcon data-hide={isMenuOpen} />
-        <CrossIcon data-hide={!isMenuOpen} />
+        <MenuIcon data-hide={state.isMenuOpen} />
+        <CrossIcon data-hide={!state.isMenuOpen} />
       </button>
       {isMenuMounted && (
-        <div className={cn(styles.menuWrapper, { [styles.menuWrapperOpen]: isMenuOpen })}>
+        <div className={cn(styles.menuWrapper, { [styles.menuWrapperOpen]: state.isMenuOpen })}>
           <div
-            className={cn(styles.overlay, { [styles.overlayOpen]: isMenuOpen })}
+            className={cn(styles.overlay, { [styles.overlayOpen]: state.isMenuOpen })}
             onClick={toggleMenu}
           ></div>
           <ul
