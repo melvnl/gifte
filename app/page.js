@@ -89,6 +89,9 @@ export default function Home() {
           else {
             setIsDelaying(true);
             setTimeout(() => {
+              if (visible == 6) {
+                setVisible((prevVisible) => prevVisible - 4);
+              }
               if (visible > 0 && visible !== 24) {
                 setVisible((prevVisible) => prevVisible - 1);
               }
