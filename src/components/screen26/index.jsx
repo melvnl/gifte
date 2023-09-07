@@ -25,8 +25,12 @@ export default function Screen26() {
         <p className=' font-Inter text-sm leading-5 mb-1 animate-gradient'>We hope you enjoy <span className=' font-RecklessNueu font-medium italic'>Garden of Glow by Gifte</span>. This digital experience is brought to you by</p>
       </div>
       <div className=" flex items-center mt-2">
-        <Image src="/icons/gifte.svg" width={68} height={32} alt='' quality={100} className=' mr-4' />
-        <Image src="/icons/circles.svg" width={98} height={20} alt='' quality={100} />
+        <Link href="https://www.gifteflorist.com" className="">
+          <Image src="/icons/gifte.svg" width={68} height={32} alt='' quality={100} className=' mr-4' />
+        </Link>
+        <Link href="http://www.circlescreative.co/" className="">
+          <Image src="/icons/circles.svg" width={98} height={20} alt='' quality={100} />
+        </Link>
       </div>
       <Link href="https://www.gifteflorist.com" className=" p-2.5 rounded-lg w-fit bg-white mt-5">
         <p className=' font-Inter text-sm leading-5 font-medium'>
