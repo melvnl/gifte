@@ -13,28 +13,28 @@ export const collections = [
     title: "Tulip Showcase",
     price: "Artificial IDR 599,000 | Fresh IDR 999,000",
     img: "/images/collections/img-1.png",
-    url: "https://www.gifteflorist.com/",
+    url: "https://gifteflorist.com/product_detail?it=MTcyOA==",
   },
   {
     title: "Euphoria Floral Tag",
     price: "Artificial IDR 115,000 | Fresh IDR 125,000",
     img: "/images/collections/img-2.png",
-    url: "https://www.gifteflorist.com/",
+    url: "https://gifteflorist.com/product_detail?it=MTcyNA==",
   }, {
     title: "Tranquil Floral Handcarry",
     price: "Preserved IDR 700,000 | Fresh IDR 600,000",
     img: "/images/collections/img-3.png",
-    url: "https://www.gifteflorist.com/",
+    url: "https://gifteflorist.com/product_detail?it=MTcyNQ==",
   }, {
     title: "Cupid Heart",
     price: "Artificial IDR 88,000 | Fresh IDR 99,000",
     img: "/images/collections/img-4.png",
-    url: "https://www.gifteflorist.com/",
+    url: "https://gifteflorist.com/product_detail?it=MTcyNg==",
   }, {
     title: "Blossom Bouquet",
     price: "Artificial IDR 399,000 | Fresh IDR 499,000",
     img: "/images/collections/img-5.png",
-    url: "https://www.gifteflorist.com/",
+    url: "https://gifteflorist.com/product_detail?it=MTcyMw==",
   },
 ]
 export default function Screen24() {
