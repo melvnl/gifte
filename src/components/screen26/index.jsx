@@ -22,7 +22,7 @@ export default function Screen26() {
   return (
     <div className='px-5 py-3 flex flex-col justify-center items-center relative bg-black h-screen'>
       <div className=" bg-gradient-to-r from-white via-white to-gray text-transparent bg-clip-text bg-300% text-center animate-gradient text-white mt-6 flex flex-col">
-        <p className=' font-Inter text-sm leading-5 mb-1 animate-gradient'>We hope you enjoy <span className=' font-RecklessNueu font-medium italic'>Garden of Glow by Gifte</span> . This digital experience is brought to you by</p>
+        <p className=' font-Inter text-sm leading-5 mb-1 animate-gradient'>We hope you enjoy <span className=' font-RecklessNueu font-medium italic'>Garden of Glow by Gifte</span>. This digital experience is brought to you by</p>
       </div>
       <div className=" flex items-center mt-2">
         <Image src="/icons/gifte.svg" width={68} height={32} alt='' quality={100} className=' mr-4' />
