@@ -21,24 +21,20 @@ export default function Screen26() {
 
   return (
     <div className='px-5 py-3 flex flex-col justify-center items-center relative bg-black h-screen'>
-      <div className=" bg-gradient-to-r from-white via-white to-gray text-transparent bg-clip-text bg-300% animate-gradient text-[#6D6D6D] mt-6 flex flex-col">
-        <p className=' font-Inter text-sm leading-5 font-medium mb-1 animate-gradient'>A Digital Experience by</p>
-        <h1 className=' font-RecklessNueu text-[22px] font-medium animate-gradient2'>Gifte & <a href="https://www.circlescreative.co">Circles</a></h1>
+      <div className=" bg-gradient-to-r from-white via-white to-gray text-transparent bg-clip-text bg-300% text-center animate-gradient text-white mt-6 flex flex-col">
+        <p className=' font-Inter text-sm leading-5 mb-1 animate-gradient'>We hope you enjoy <span className=' font-RecklessNueu font-medium italic'>Garden of Glow by Gifte</span> . This digital experience is brought to you by</p>
+      </div>
+      <div className=" flex items-center mt-2">
+        <Image src="/icons/gifte.svg" width={68} height={32} alt='' quality={100} className=' mr-4' />
+        <Image src="/icons/circles.svg" width={98} height={20} alt='' quality={100} />
       </div>
       <Link href="https://www.gifteflorist.com" className=" p-2.5 rounded-lg w-fit bg-white mt-5">
         <p className=' font-Inter text-sm leading-5 font-medium'>
           Visit Gifte
         </p>
       </Link>
-      <div className=" text-white absolute text-center bottom-5">
-        <p className=' font-RecklessNueu leading-[14px] text-[10px] font-medium mb-1'>2023 © Gifte</p>
-        <div className=" flex items-center">
-          <h1 className='leading-[14px] text-[10px] font-medium'>Website by
-          </h1>
-          <Link href="https://www.circlescreative.co" className=" ml-1">
-            <Image src="/icons/circles.svg" width={48} height={10} alt='' />
-          </Link>
-        </div>
+      <div className=" text-white absolute text-center font-RecklessNueu text-[10px] bottom-5">
+        2023 © Gifte
       </div>
     </div >
   )
