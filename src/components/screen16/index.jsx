@@ -17,8 +17,8 @@ const phrares = [
 export default function Screen16() {
 
   const animation = {
-    initial: { y: "100%" },
-    enter: i => ({ y: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i } })
+    initial: { x: "100%" },
+    enter: i => ({ x: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i } })
   }
 
   const { ref, inView, entry } = useInView({
@@ -27,11 +27,11 @@ export default function Screen16() {
   });
 
   return (
-    <div className='h-screen '>
+    <div ref={ref} className='h-screen '>
       <Header />
-      <div ref={ref} className=" mt-10 h-full ">
+      <motion.div key={0} custom={0} variants={animation} initial="initial" animate={inView ? "enter" : ""} className='  mt-10 h-full '>
         <Image src="/images/screen-16-img.png" width={405 * 2} height={535 * 2} alt='' className=' w-full -ml-4' />
-      </div>
+      </motion.div>
     </div>
   )
 }

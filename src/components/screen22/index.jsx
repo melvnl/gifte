@@ -19,11 +19,11 @@ export default function Screen22() {
   });
 
   return (
-    <div>
+    <div ref={ref}>
       <Header />
-      <div className="flex flex-col items-center justify-center h-screen pt-16">
+      <motion.div key={0} custom={0} variants={animation} initial="initial" animate={inView ? "enter" : ""} className='  mt-6 flex justify-center px-5 py-3 pt-16'>
         <Image src="/images/sign-up-flow-4.png" width={292} height={520} alt='' quality={100} />
-      </div>
+      </motion.div>
     </div >
   )
 }

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import Image from 'next/image';
 import classNames from 'classnames';
 
 const phrares = [

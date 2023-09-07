@@ -19,11 +19,11 @@ export default function Screen21() {
   });
 
   return (
-    <div>
+    <div ref={ref}>
       <Header />
-      <div className=" mt-6 flex justify-center px-5 py-3 pt-16">
-        <Image src="/images/sign-up-flow-3.png" width={292} height={520} alt='' quality={100} className=' mt-auto' />
-      </div>
+      <motion.div key={0} custom={0} variants={animation} initial="initial" animate={inView ? "enter" : ""} className='  mt-6 flex justify-center px-5 py-3 pt-16'>
+        <Image src="/images/sign-up-flow-3.png" width={292} height={520} alt='' quality={100} />
+      </motion.div>
     </div >
   )
 }

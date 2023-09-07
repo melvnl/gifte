@@ -34,9 +34,9 @@ export default function Screen15() {
         </div>
         <div className=" text-[#6D6D6D] text-justify leading-5">
           {phrares.map((phrase, index) => {
-            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
+            return <motion.div key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
               {phrase}
-            </motion.span>
+            </motion.div>
           })}
         </div>
       </div>

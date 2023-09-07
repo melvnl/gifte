@@ -1,10 +1,7 @@
-'use client'
-
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header';
 import React from 'react';
-import Image from 'next/image';
 
 const phrares = [
   "A crystal-clear box unveils the intricate beauty",
@@ -33,14 +30,13 @@ export default function Screen7() {
           <h1 className=' font-medium text-base'>Tulip Showcase</h1>
           <span className=' text-base'>1/5</span>
         </div>
-        <div className=" font-Inter text-[#6D6D6D] text-justify leading-5 ">
+        <div className=" font-Inter text-[#6D6D6D] text-justify leading-5  ">
           {phrares.map((phrase, index) => {
-            return <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm'>
+            return <motion.div key={index} custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} className=' text-sm overflow-hidden'>
               {phrase}
-            </motion.span>
+            </motion.div>
           })}
         </div>
-        {/* <Image src="/images/flower.png" width={425} height={502} alt='' className=' mt-3' /> */}
       </div>
     </div >
   )
